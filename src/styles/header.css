@@ -1,0 +1,43 @@
+.App--Header {
+  background-color: #3469b0;
+  /*height: 80px;*/
+  /*padding: 20px;*/
+  color: white;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  grid-template-rows: 120px;
+  min-width: 120px;
+  grid-gap: 1rem;
+  /*display: flex;
+  flex-direction: row;*/
+}
+
+.Header--text {
+  /*text-indent: 50px;*/
+  /*margin-left: auto;*/
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 1,4rem;
+  grid-column-start: 2 / 3;
+}
+
+.Header--logo {
+  grid-column-start: 1 / 2;
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+  margin-left: 3rem;
+  /*border: 1px dotted white;*/
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media screen and (max-width: 320px) {
+    .Header--text {display: none;}
+  .App--Header {grid-template-columns: 1fr}
+  .Header--logo {margin-left: auto; margin-right: auto}
+}
