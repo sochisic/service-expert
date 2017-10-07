@@ -22,7 +22,6 @@
 
 .Header--logo {
   grid-column-start: 1 / 2;
-  animation: App-logo-spin infinite 20s linear;
   height: 80px;
   margin-left: 3rem;
   margin-top: auto;
@@ -32,11 +31,6 @@
 .Header--button {
   grid-column: 3 / 4;
   align-self: center;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
 
 @media screen and (max-width: 320px) {

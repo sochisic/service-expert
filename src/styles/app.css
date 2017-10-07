@@ -21,11 +21,12 @@ body {
 .App--Header {
   grid-row: 1 / 2;
   grid-column: full;
-  opacity: 0.6;
+
 }
 
 .App--Wrapper {
-  background-image: url(../img/iphone_bg.jpg);
+  /*background-image: url(../img/iphone_bg.jpg);*/
+  background-image: url(../img/iphone_iphone_6_apple_101170_1920x1080.jpg);
   grid-column: full;
   grid-row: 1 / 4;
 }
@@ -55,7 +56,7 @@ body {
 
 .App--FormContainer {
   grid-row: 5 / 6;
-  grid-column: main;
+  grid-column: full;
 }
 
 .App--Social {

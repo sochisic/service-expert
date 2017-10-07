@@ -9,7 +9,8 @@ class FormContainer extends Component {
   render() {
     return (
       <div className="App--FormContainer">
-        Ну и что блять?
+        <InfoForm />
+        <MailForm />
       </div>
     );
   }

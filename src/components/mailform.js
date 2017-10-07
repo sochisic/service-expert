@@ -4,7 +4,14 @@ class MailForm extends Component {
 
   render() {
     return (
-      <div>привет</div>
+      <div className="MailForm">
+        <div className="MailForm--title">
+          Заглавие формы обратной связи.
+        </div>
+        <div className="MailForm--content">
+          Содержание формы обратной связи.
+        </div>
+      </div>
     );
   }
 
