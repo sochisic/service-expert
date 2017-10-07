@@ -25,7 +25,6 @@ body {
 }
 
 .App--Wrapper {
-  /*background-image: url(../img/iphone_bg.jpg);*/
   background-image: url(../img/iphone_iphone_6_apple_101170_1920x1080.jpg);
   grid-column: full;
   grid-row: 1 / 4;
