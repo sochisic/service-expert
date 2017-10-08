@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './styles/app.css';
+import './styles/appwraper.css';
 import Header from './components/header';
 import Intro from './components/intro.js';
 import RepairContainer from './components/repaircontainer';
@@ -17,12 +18,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
         <div className="App--Wrapper">
           <Header />
-          <Intro />
           <RepairContainer />
-          <Content />
         </div>
         <SimpleMap />
         <FormContainer />

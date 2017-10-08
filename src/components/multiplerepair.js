@@ -28,9 +28,7 @@ export default class MultipleRepair extends Component {
           floatingLabelText="Выберите"
           floatingLabelStyle={{color: 'green', fontSize: '1rem'}}
           floatingLabelFixed={false}
-          className="repairContainer--select"
-
-
+          className="RepairContainer--select"
         >
           {items}
         </SelectField>

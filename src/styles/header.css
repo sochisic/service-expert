@@ -1,15 +1,13 @@
 .App--Header {
   background-color: rgba(#ffffff, 0);
-
   color: ffffff;
-
   display: grid;
   grid-template-columns: 200px 1fr 200px;
   grid-template-rows: 120px;
   min-width: 120px;
-  /*grid-gap: 1rem;*/
   opacity: 0.6;
-
+  grid-row: 1 / 2;
+  grid-column: full;
 }
 
 .Header--text {
@@ -26,7 +24,7 @@
   height: 80px;
   margin-left: auto;
   margin-right: auto;
-align-self: center;
+  align-self: center;
 }
 
 .Header--button {
@@ -36,7 +34,7 @@ align-self: center;
 
 
 @media all and (max-width: 400px) {
-    .Header--text {display: none;}
+  .Header--text {display: none;}
   .App--Header {grid-template-columns: 1fr 1fr}
   .Header--logo {
     margin-left: auto;

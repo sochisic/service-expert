@@ -15,35 +15,12 @@ body {
   [main-start] minmax(0, 50em) [main-end]
   minmax(1em, 1fr) [full-end];
   grid-template-rows: 120px 400px 500px 1fr 415px 70px 100px;
-
-}
-
-.App--Header {
-  grid-row: 1 / 2;
-  grid-column: full;
-
 }
 
 .App--Wrapper {
   background-image: url(../img/iphone_iphone_6_apple_101170_1920x1080.jpg);
   grid-column: full;
   grid-row: 1 / 4;
-}
-
-.App--Intro {
-  font-size: large;
-  grid-row: 2 / 3;
-  grid-column: main;
-}
-
-.App--RepairContainer {
-  grid-row: 3 / 4;
-  grid-column: main;
-}
-
-.App--Content {
-  grid-column: main;
-  grid-row: 2 / 3;
 }
 
 .App--SimpleMap {
