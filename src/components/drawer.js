@@ -6,7 +6,7 @@ import IconButton from '../../node_modules/material-ui/IconButton';
 import NavigationClose from '../../node_modules/material-ui/svg-icons/navigation/close';
 import MenuItem from '../../node_modules/material-ui/MenuItem';
 
-export default class DrawerOpenRightExample extends React.Component {
+export default class RightDrawer extends React.Component {
 
   render() {
     return (
