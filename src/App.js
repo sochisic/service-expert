@@ -14,13 +14,16 @@ import Footer from './components/footer';
 
 
 
+
 class App extends Component {
   render() {
     return (
       <div className="App">
         <div className="App--Wrapper">
+
           <Header />
           <RepairContainer />
+
         </div>
         <SimpleMap />
         <FormContainer />

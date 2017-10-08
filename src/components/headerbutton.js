@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import IconButton from 'material-ui/IconButton';
 import Menu from '../../node_modules/material-ui/svg-icons/navigation/menu';
 
@@ -32,15 +32,21 @@ const styles = {
   },
 };
 
-const HeaderButton = () => (
-  <div className="Header--button">
-    <IconButton
-      iconStyle={styles.mediumIcon}
-      style={styles.medium}
-    >
-      <Menu />
-    </IconButton>
-  </div>
-);
+class HeaderButton extends Component {
+    render() {
+      return (
+        <div className="Header--button">
+          <IconButton
+            iconStyle={styles.mediumIcon}
+            style={styles.medium}
+            onClick={this.props.onClick}
+          >
+            <Menu />
+          </IconButton>
+        </div>
+      );
+    }
+
+}
 
 export default HeaderButton;
