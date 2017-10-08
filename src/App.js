@@ -9,6 +9,7 @@ import SimpleMap from './components/map';
 import FormContainer from './components/formcontainer';
 import Social from './components/social'
 import Footer from './components/footer';
+import Drawer from './components/drawer';
 
 
 
@@ -16,14 +17,21 @@ import Footer from './components/footer';
 
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {open: false};
+    this.handleToggle = this.handleToggle.bind(this);
+  }
+
+  handleToggle = () => this.setState({ open: !this.state.open });
+
   render() {
     return (
       <div className="App">
         <div className="App--Wrapper">
-
-          <Header />
+          <Header drawerToggle={this.handleToggle} />
           <RepairContainer />
-
+          <Drawer open={this.state.open} drawerToggle={this.handleToggle} />
         </div>
         <SimpleMap />
         <FormContainer />
