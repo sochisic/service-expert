@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MailFormFields from './MailFormFields';
 
 class MailForm extends Component {
 
@@ -6,11 +7,9 @@ class MailForm extends Component {
     return (
       <div className="MailForm">
         <div className="MailForm--title">
-          Заглавие формы обратной связи.
+          Задайте вопрос или напишите нам сообщение.
         </div>
-        <div className="MailForm--content">
-          Содержание формы обратной связи.
-        </div>
+        <MailFormFields />
       </div>
     );
   }

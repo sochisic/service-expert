@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MailForm from './mailform';
+import MailForm from './mailform/mailform';
 import InfoForm from './infoform';
 import '../styles/formcontainer.css';
 

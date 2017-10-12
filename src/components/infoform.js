@@ -46,7 +46,7 @@ class InfoForm extends Component {
     return (
       <div className="InfoForm">
         <div className="InfoForm--title">
-          Заголовок информационной формы.
+          Контакты для связи с нами.
         </div>
         <div className="InfoForm--item1">
           <Location style={iconStyles.mediumIcon} color={pink500} />
