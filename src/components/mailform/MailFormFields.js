@@ -35,8 +35,8 @@ const TextFieldExampleSimple = () => (
       hintText="Сообщение"
       multiLine={true}
       fullWidth={true}
-      rows={2}
-      rowsMax={4}
+      rows={4}
+      rowsMax={5}
     /><br />
     <RaisedButton
       label="Отправить сообщение"
