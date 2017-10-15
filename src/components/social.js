@@ -9,7 +9,7 @@ class Social extends Component {
   render() {
     return (
       <div className="App--Social">
-        <a href="https://www.instagram.com/sochi_service/"  title="Instagram Васи Мастера" target="_blank">
+        <a href="https://www.instagram.com/sochi_service/"  title="Instagram Васи Мастера" target="_blank" rel="noopener noreferrer">
           <img className="social--logo" src={inst} alt="Instagramm" />
         </a>
         <a href="vk.com" title="VK Васи Мастера" target="_blank">

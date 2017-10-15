@@ -1,7 +1,6 @@
 import React from 'react';
 import Drawer from '../../node_modules/material-ui/Drawer';
 import AppBar from '../../node_modules/material-ui/AppBar';
-import RaisedButton from '../../node_modules/material-ui/RaisedButton';
 import IconButton from '../../node_modules/material-ui/IconButton';
 import NavigationClose from '../../node_modules/material-ui/svg-icons/navigation/close';
 import MenuItem from '../../node_modules/material-ui/MenuItem';
