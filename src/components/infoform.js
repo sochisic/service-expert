@@ -9,6 +9,7 @@ lightBlue800
 
 
 
+
 const iconStyles = {
   smallIcon: {
       width: 25,
@@ -40,14 +41,12 @@ const iconStyles = {
     },
 };
 
+
 class InfoForm extends Component {
 
   render() {
     return (
       <div className="InfoForm">
-        <div className="InfoForm--title">
-          Контакты для связи с нами.
-        </div>
         <div className="InfoForm--item1">
           <Location style={iconStyles.mediumIcon} color={pink500} />
           <h4>
@@ -75,9 +74,7 @@ class InfoForm extends Component {
             +7-900-000-1212
           </div>
         </div>
-        <div className="InfoForm--item4">
 
-        </div>
       </div>
     );
   }

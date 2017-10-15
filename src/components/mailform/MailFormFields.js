@@ -8,9 +8,10 @@ lightBlue800
 , pink500} from '../../../node_modules/material-ui/styles/colors';
 import '../../styles/formcontainer.css';
 
+
 const styles = {
   button: {
-    minWidth: '200px',
+    minWidth: '100px',
   },
   label: {
     color: 'white',
@@ -39,7 +40,7 @@ const TextFieldExampleSimple = () => (
       rowsMax={5}
     /><br />
     <RaisedButton
-      label="Отправить сообщение"
+      label="Отправить"
       labelPosition="after"
       className="MailForm--Fields-Button"
       backgroundColor={lightBlue800}
