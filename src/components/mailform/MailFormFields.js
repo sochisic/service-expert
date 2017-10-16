@@ -29,6 +29,11 @@ class TextFields extends Component {
       name: '',
       emailPhone: '',
       text: '',
+      nameValid: false,
+      emailPhoneValid: false,
+      textValid: false,
+      buttonDisabled: true,
+      formErrors: {name: '', emailPhone: '', text: ''}
     };
     this.handleUserInput = this.handleUserInput.bind(this);
   }
@@ -36,8 +41,31 @@ class TextFields extends Component {
   handleUserInput = (e) => {
   const name = e.target.name;
   const value = e.target.value;
-  this.setState({[name]: value});
-  console.log(e.target.name);
+  this.setState({[name]: value},
+    () => {this.validateField(name, value)});
+
+}
+
+validateField(fieldName, value) {
+  let nameValid = this.state.nameValid;
+  let emailPhoneValid = this.state.emailPhoneValid;
+  let textValid = this.state.textValid;
+
+  switch (fieldName) {
+    case 'name':
+      nameValid = value.length <= 20;
+      break;
+    case 'emailPhone':
+      emailPhoneValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+      break;
+
+    case 'text':
+      textValid = value.length <= 370;
+    break;
+    default:
+
+  }
+
 }
 
   render() {
@@ -78,7 +106,7 @@ class TextFields extends Component {
           icon={<ActionSend color={fullWhite} />}
           buttonStyle={styles.button}
           labelStyle={styles.label}
-
+          disabled={this.state.buttonDisabled}
         />
       </div>
     );
