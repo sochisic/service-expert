@@ -6,6 +6,7 @@ import { fullWhite } from '../../../node_modules/material-ui/styles/colors';
 import { lightBlue800 } from '../../../node_modules/material-ui/styles/colors';
 import '../../styles/formcontainer.css';
 import Heart from '../../img/heart_24px.svg';
+import { createStore, Provider, connect } from '../../../node_modules/redux-zero';
 
 
 const styles = {
@@ -58,11 +59,9 @@ validateField(fieldName, value) {
     case 'emailPhone':
       emailPhoneValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
       break;
-
     case 'text':
       textValid = value.length <= 370;
-    break;
-    default:
+      break;
 
   }
 
