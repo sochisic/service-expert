@@ -6,7 +6,12 @@ import { fullWhite } from '../../../node_modules/material-ui/styles/colors';
 import { lightBlue800 } from '../../../node_modules/material-ui/styles/colors';
 import '../../styles/formcontainer.css';
 import Heart from '../../img/heart_24px.svg';
-import { createStore, Provider, connect } from '../../../node_modules/redux-zero';
+import { connect } from '../../../node_modules/redux-zero';
+import { validateField, handleUserInput } from '../actions/actions';
+
+const mapToProps = ({ count, name, emailPhone, text, buttonDisabled }) => ({ count, name, emailPhone, text, buttonDisabled });
+
+
 
 
 const styles = {
@@ -22,69 +27,31 @@ const styles = {
 
 };
 
+// handleUserInput = (e) => {
+// const name = e.target.name;
+// const value = e.target.value;
+// this.setState({[name]: value},
+//   () => {validateField(name, value)});
+//
+// };
 
-class TextFields extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: '',
-      emailPhone: '',
-      text: '',
-      nameValid: false,
-      emailPhoneValid: false,
-      textValid: false,
-      buttonDisabled: true,
-      formErrors: {name: '', emailPhone: '', text: ''}
-    };
-    this.handleUserInput = this.handleUserInput.bind(this);
-  }
-
-  handleUserInput = (e) => {
-  const name = e.target.name;
-  const value = e.target.value;
-  this.setState({[name]: value},
-    () => {this.validateField(name, value)});
-
-}
-
-validateField(fieldName, value) {
-  let nameValid = this.state.nameValid;
-  let emailPhoneValid = this.state.emailPhoneValid;
-  let textValid = this.state.textValid;
-
-  switch (fieldName) {
-    case 'name':
-      nameValid = value.length <= 20;
-      break;
-    case 'emailPhone':
-      emailPhoneValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
-      break;
-    case 'text':
-      textValid = value.length <= 370;
-      break;
-
-  }
-
-}
-
-  render() {
-    return (
+  export default connect(mapToProps)(({name, emailPhone, text, buttonDisabled}) => (
       <div>
         <TextField
           hintText=""
           fullWidth={true}
           floatingLabelText="Имя"
           className="MailForm--TextField-Name"
-          value={this.state.name}
-          onChange={this.handleUserInput}
+          value={ name }
+          onChange={ handleUserInput }
           name="name"
         /><br />
         <TextField
           hintText=""
           fullWidth={true}
           floatingLabelText="Телефон"
-          value={this.state.emailPhone}
-          onChange={this.handleUserInput}
+          value={ emailPhone }
+          onChange={ handleUserInput }
           name="emailPhone"
         /><br />
         <TextField
@@ -93,8 +60,8 @@ validateField(fieldName, value) {
           fullWidth={true}
           rows={4}
           rowsMax={5}
-          value={this.state.text}
-          onChange={this.handleUserInput}
+          value={ text }
+          onChange={ handleUserInput }
           name="text"
         /><br />
         <RaisedButton
@@ -105,11 +72,7 @@ validateField(fieldName, value) {
           icon={<ActionSend color={fullWhite} />}
           buttonStyle={styles.button}
           labelStyle={styles.label}
-          disabled={this.state.buttonDisabled}
+          disabled={ buttonDisabled }
         />
       </div>
-    );
-  }
-}
-
-export default TextFields;
+    ));
