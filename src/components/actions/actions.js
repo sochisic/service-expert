@@ -1,5 +1,5 @@
 import store from "../store/store";
-import { lightBlue800, orange500, lightGreenA400
+import { lightBlue800, orange500, lightGreenA700
  } from '../../../node_modules/material-ui/styles/colors';
 
 // export const increment = () => {
@@ -16,11 +16,11 @@ import { lightBlue800, orange500, lightGreenA400
 const styles = {
   accept: {
     underline: {
-        borderColor: lightGreenA400
+        borderColor: lightGreenA700
 ,
       },
     name: {
-           color: lightGreenA400
+           color: lightGreenA700
 ,
       }
   },
@@ -50,11 +50,17 @@ const validateField = (fieldName, value) => {
          });
       }
       if(!nameValid && value.length >= 20) {
-        store.setState({ formErrorsName: 'Слишком длинное имя!' });
+        store.setState({
+          formErrorsName: 'Слишком длинное имя!',
+          nameFieldErrorStyle: styles.warn,
+          nameFieldFloatingFocusStyle: styles.warn
+         });
       }
       if(!nameValid && value.length < 3) {
         store.setState({
-          formErrorsName: 'Слишком короткое имя!'
+          formErrorsName: 'Слишком короткое имя!',
+          nameFieldErrorStyle: styles.warn,
+          nameFieldFloatingFocusStyle: styles.warn
         });
       }
 
