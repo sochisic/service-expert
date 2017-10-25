@@ -3,15 +3,14 @@ import TextField from '../../../node_modules/material-ui/TextField';
 import RaisedButton from '../../../node_modules/material-ui/RaisedButton';
 import ActionSend from '../../../node_modules/material-ui/svg-icons/content/send';
 import { fullWhite } from '../../../node_modules/material-ui/styles/colors';
-import { lightBlue800 } from '../../../node_modules/material-ui/styles/colors';
+import { lightBlue800, orange500, green800
+ } from '../../../node_modules/material-ui/styles/colors';
 import '../../styles/formcontainer.css';
 import Heart from '../../img/heart_24px.svg';
 import { connect } from '../../../node_modules/redux-zero';
-import { validateField, handleUserInput } from '../actions/actions';
+import { handleUserInput, handleBlur } from '../actions/actions';
 
-const mapToProps = ({ count, name, emailPhone, text, buttonDisabled }) => ({ count, name, emailPhone, text, buttonDisabled });
-
-
+const mapToProps = ({ count, name, emailPhone, text, formErrorsName, formErrorsText, formErrorsEmailPhone, formValid, nameFieldErrorStyle, nameFieldFloatingFocusStyle, nameFieldBorderStyle }) => ({ count, name, emailPhone, text, formErrorsName, formErrorsText, formErrorsEmailPhone, formValid, nameFieldErrorStyle, nameFieldFloatingFocusStyle, nameFieldBorderStyle});
 
 
 const styles = {
@@ -20,22 +19,10 @@ const styles = {
   },
   label: {
     color: 'white',
-  },
-  icon: {
-
-  },
-
+  }
 };
 
-// handleUserInput = (e) => {
-// const name = e.target.name;
-// const value = e.target.value;
-// this.setState({[name]: value},
-//   () => {validateField(name, value)});
-//
-// };
-
-  export default connect(mapToProps)(({name, emailPhone, text, buttonDisabled}) => (
+  export default connect( mapToProps )(({ name, emailPhone, text, formErrorsName, formErrorsText, formErrorsEmailPhone, formValid, nameFieldErrorStyle, nameFieldFloatingFocusStyle, nameFieldBorderStyle }) => (
       <div>
         <TextField
           hintText=""
@@ -44,7 +31,13 @@ const styles = {
           className="MailForm--TextField-Name"
           value={ name }
           onChange={ handleUserInput }
+          onBlur={ handleBlur }
           name="name"
+          errorText={ formErrorsName }
+          errorStyle={ nameFieldErrorStyle }
+          floatingLabelFocusStyle={ nameFieldFloatingFocusStyle }
+          underlineFocusStyle={ nameFieldBorderStyle }
+
         /><br />
         <TextField
           hintText=""
@@ -53,6 +46,8 @@ const styles = {
           value={ emailPhone }
           onChange={ handleUserInput }
           name="emailPhone"
+          errorText={ formErrorsEmailPhone }
+          onBlur={ () => console.log('kek') }
         /><br />
         <TextField
           hintText="Сообщение"
@@ -62,7 +57,9 @@ const styles = {
           rowsMax={5}
           value={ text }
           onChange={ handleUserInput }
+          onBlur={ () => console.log('kek') }
           name="text"
+          errorText={ formErrorsText }
         /><br />
         <RaisedButton
           label="Отправить"
@@ -72,7 +69,7 @@ const styles = {
           icon={<ActionSend color={fullWhite} />}
           buttonStyle={styles.button}
           labelStyle={styles.label}
-          disabled={ buttonDisabled }
+          disabled={ !formValid }
         />
       </div>
     ));

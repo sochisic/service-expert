@@ -7,8 +7,13 @@ const initialState = {
   nameValid: false,
   emailPhoneValid: false,
   textValid: false,
-  buttonDisabled: true,
-  formErrors: {name: '', emailPhone: '', text: ''}
+  formErrorsName: '',
+  formErrorsEmailPhone: '',
+  formErrorsText: '',
+  formValid: false,
+  nameFieldErrorStyle: '',
+  nameFieldFloatingFocusStyle: '',
+  nameFieldBorderStyle: ''
 };
 
 const store = createStore(initialState);
