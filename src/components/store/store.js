@@ -1,4 +1,14 @@
 import { createStore } from '../../../node_modules/redux-zero';
+import { lightBlue800 } from '../../../node_modules/material-ui/styles/colors';
+
+const styles = {
+  name: {
+    color: lightBlue800
+  },
+  underline: {
+    underline: lightBlue800
+  }
+};
 
 const initialState = {
   name: '',
@@ -12,8 +22,14 @@ const initialState = {
   formErrorsText: '',
   formValid: false,
   nameFieldErrorStyle: '',
-  nameFieldFloatingFocusStyle: '',
-  nameFieldBorderStyle: ''
+  nameFieldFloatingFocusStyle: styles.name,
+  nameFieldBorderStyle: styles.underline,
+  phoneFieldErrorStyle: '',
+  phoneFieldFloatingFocusStyle: styles.name,
+  phoneFieldBorderStyle: styles.underline,
+  textFieldErrorStyle: '',
+  textFieldFloatingFocusStyle: styles.name,
+  textFieldBorderStyle: styles.underline,
 };
 
 const store = createStore(initialState);

@@ -10,7 +10,7 @@ import Heart from '../../img/heart_24px.svg';
 import { connect } from '../../../node_modules/redux-zero';
 import { handleUserInput, handleBlur } from '../actions/actions';
 
-const mapToProps = ({ count, name, emailPhone, text, formErrorsName, formErrorsText, formErrorsEmailPhone, formValid, nameFieldErrorStyle, nameFieldFloatingFocusStyle, nameFieldBorderStyle }) => ({ count, name, emailPhone, text, formErrorsName, formErrorsText, formErrorsEmailPhone, formValid, nameFieldErrorStyle, nameFieldFloatingFocusStyle, nameFieldBorderStyle});
+const mapToProps = ({ count, name, emailPhone, text, formErrorsName, formErrorsText, formErrorsEmailPhone, formValid, nameFieldErrorStyle, nameFieldFloatingFocusStyle, nameFieldBorderStyle, phoneFieldErrorStyle, phoneFieldFloatingFocusStyle, phoneFieldBorderStyle, textFieldErrorStyle, textFieldFloatingFocusStyle, textFieldBorderStyle}) => ({ count, name, emailPhone, text, formErrorsName, formErrorsText, formErrorsEmailPhone, formValid, nameFieldErrorStyle, nameFieldFloatingFocusStyle, nameFieldBorderStyle, phoneFieldErrorStyle, phoneFieldFloatingFocusStyle, phoneFieldBorderStyle, textFieldErrorStyle, textFieldFloatingFocusStyle, textFieldBorderStyle});
 
 
 const styles = {
@@ -19,15 +19,21 @@ const styles = {
   },
   label: {
     color: 'white',
+  },
+  name: {
+    color: lightBlue800
+  },
+  underline: {
+    underline: lightBlue800
   }
 };
 
-  export default connect( mapToProps )(({ name, emailPhone, text, formErrorsName, formErrorsText, formErrorsEmailPhone, formValid, nameFieldErrorStyle, nameFieldFloatingFocusStyle, nameFieldBorderStyle }) => (
+  export default connect( mapToProps )(({ name, emailPhone, text, formErrorsName, formErrorsText, formErrorsEmailPhone, formValid, nameFieldErrorStyle, nameFieldFloatingFocusStyle, nameFieldBorderStyle, phoneFieldErrorStyle, phoneFieldFloatingFocusStyle, phoneFieldBorderStyle, textFieldErrorStyle, textFieldFloatingFocusStyle, textFieldBorderStyle }) => (
       <div>
         <TextField
           hintText=""
           fullWidth={true}
-          floatingLabelText="Имя"
+          floatingLabelText="Ваше имя"
           className="MailForm--TextField-Name"
           value={ name }
           onChange={ handleUserInput }
@@ -42,24 +48,30 @@ const styles = {
         <TextField
           hintText=""
           fullWidth={true}
-          floatingLabelText="Телефон"
+          floatingLabelText="Ваш телефон"
           value={ emailPhone }
           onChange={ handleUserInput }
           name="emailPhone"
           errorText={ formErrorsEmailPhone }
-          onBlur={ () => console.log('kek') }
+          onBlur={ handleBlur }
+          errorStyle={ phoneFieldErrorStyle }
+          floatingLabelFocusStyle={ phoneFieldFloatingFocusStyle }
+          underlineFocusStyle={ phoneFieldBorderStyle }
         /><br />
         <TextField
-          hintText="Сообщение"
+          hintText="Ваше сообщение"
           multiLine={true}
           fullWidth={true}
           rows={4}
           rowsMax={5}
           value={ text }
           onChange={ handleUserInput }
-          onBlur={ () => console.log('kek') }
+          onBlur={ handleBlur }
           name="text"
           errorText={ formErrorsText }
+          errorStyle={ textFieldErrorStyle }
+          floatingLabelFocusStyle={ textFieldFloatingFocusStyle }
+          underlineFocusStyle={ textFieldBorderStyle }
         /><br />
         <RaisedButton
           label="Отправить"
@@ -70,6 +82,7 @@ const styles = {
           buttonStyle={styles.button}
           labelStyle={styles.label}
           disabled={ !formValid }
+          onBlur={ handleBlur }
         />
       </div>
     ));
