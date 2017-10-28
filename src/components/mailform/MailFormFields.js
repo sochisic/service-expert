@@ -83,6 +83,7 @@ const styles = {
           labelStyle={styles.label}
           disabled={ !formValid }
           onBlur={ handleBlur }
+          onClick={ () => console.log('Поехали!') }
         />
       </div>
     ));

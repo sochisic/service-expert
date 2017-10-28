@@ -35,10 +35,7 @@ const styles = {
 };
 
 const validateField = (fieldName, value) => {
-  let nameValid =             store.getState().nameValid;
-  let emailPhoneValid =       store.getState().emailPhoneValid;
-  let textValid =             store.getState().textValid;
-
+  let nameValid, emailPhoneValid, textValid;
   switch (fieldName) {
     case 'name':
       nameValid = (value.length <= 25 && value.length > 3) ? true : false;
@@ -71,13 +68,17 @@ const validateField = (fieldName, value) => {
     case 'emailPhone':
     var regExp = new RegExp(/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/);
     var regExp2 = new RegExp(/[0-9]/,'g');
-      emailPhoneValid = regExp.test(value) && value.match(regExp2).length === 10 || value.match(regExp2).length === 11;
+        emailPhoneValid = regExp.test(value) &&  value.match(regExp2).length === 10 || value.match(regExp2).length === 11;
+
+
+
       if(!emailPhoneValid) {
         store.setState({
           formErrorsEmailPhone: 'Введите корректный номер телефона!',
           phoneFieldErrorStyle: styles.warn.name,
           phoneFieldFloatingFocusStyle: styles.warn.name,
-          phoneFieldBorderStyle: styles.warn.underline
+          phoneFieldBorderStyle: styles.warn.underline,
+          textValid: false
         });
       }
       if(emailPhoneValid) {
@@ -97,7 +98,8 @@ const validateField = (fieldName, value) => {
           formErrorsText: 'Слишком длинное сообщение!',
           textFieldErrorStyle: styles.warn.name,
           textFieldFloatingFocusStyle: styles.warn.name,
-          textFieldBorderStyle: styles.warn.underline
+          textFieldBorderStyle: styles.warn.underline,
+          textValid: false
         });
       }
       if(!textValid && value.length <= 10) {
@@ -105,7 +107,8 @@ const validateField = (fieldName, value) => {
           formErrorsText: 'Слишком короткое сообщение!',
           textFieldErrorStyle: styles.warn.name,
           textFieldFloatingFocusStyle: styles.warn.name,
-          textFieldBorderStyle: styles.warn.underline
+          textFieldBorderStyle: styles.warn.underline,
+          textValid: false
         });
       }
       if(textValid) {
@@ -120,10 +123,6 @@ const validateField = (fieldName, value) => {
 
   }
   validateForm();
-  // store.setState({
-  //   formErrors: fieldValidationErrors.name,
-  // }, this.validateForm);
-
 }
 
 const validateForm = () => {
@@ -142,7 +141,6 @@ validateField(name, value);
 }
 
 export const handleBlur = (e) => {
-  console.log(e.target.name);
 switch (e.target.name) {
   case 'name':
     if(e.target.value.length === 0) {
@@ -175,8 +173,4 @@ switch (e.target.name) {
   }
     break;
 }
-// const name = e.target.name;
-// const value = e.target.value;
-// store.setState({[name]: value});
-// validateField(name, value);
 }
