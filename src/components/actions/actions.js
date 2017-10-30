@@ -131,7 +131,6 @@ const validateField = (fieldName, value) => {
 const validateForm = () => {
   store.setState({formValid: store.getState().emailPhoneValid &&
                             store.getState().nameValid && store.getState().textValid});
-  if(store.getState().formValid) console.log('Form Validated Succesfully');
 }
 
 
@@ -177,5 +176,5 @@ switch (e.target.name) {
 }
 
 export const sendMail = (e) => {
-  console.log(`Имя: ${store.getState().name} \n Телефон ${store.getState().emailPhone} \n Текст сообщения ${store.getState().text}` );
+  console.log(`Имя: ${store.getState().name}\nТелефон ${store.getState().emailPhone}\nТекст сообщения ${store.getState().text}` );
 }
