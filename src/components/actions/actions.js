@@ -39,7 +39,6 @@ const validateField = (fieldName, value) => {
   switch (fieldName) {
     case 'name':
       nameValid = (value.length <= 25 && value.length > 3) ? true : false;
-      console.log(nameValid);
       if(nameValid) {
         store.setState({
           formErrorsName: '',
@@ -53,7 +52,8 @@ const validateField = (fieldName, value) => {
           formErrorsName: 'Слишком длинное имя!',
           nameFieldErrorStyle: styles.warn.name,
           nameFieldFloatingFocusStyle: styles.warn.name,
-          nameFieldBorderStyle: styles.warn.underline
+          nameFieldBorderStyle: styles.warn.underline,
+          nameValid: false
          });
       }
       if(!nameValid && value.length < 3) {
@@ -61,17 +61,20 @@ const validateField = (fieldName, value) => {
           formErrorsName: 'Слишком короткое имя!',
           nameFieldErrorStyle: styles.warn.name,
           nameFieldFloatingFocusStyle: styles.warn.name,
-          nameFieldBorderStyle: styles.warn.underline
+          nameFieldBorderStyle: styles.warn.underline,
+          nameValid: false
         });
       }
       break;
     case 'emailPhone':
     var regExp = new RegExp(/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/);
     var regExp2 = new RegExp(/[0-9]/,'g');
-        emailPhoneValid = regExp.test(value) &&  value.match(regExp2).length === 10 || value.match(regExp2).length === 11;
+        const PhoneValidator = () => {
+          if(!regExp.test(value)) return false;
+          if(value.match(regExp2).length === 10 || value.match(regExp2).length === 11) return true;
+        }
 
-
-
+        console.log(emailPhoneValid);
       if(!emailPhoneValid) {
         store.setState({
           formErrorsEmailPhone: 'Введите корректный номер телефона!',
@@ -81,7 +84,7 @@ const validateField = (fieldName, value) => {
           textValid: false
         });
       }
-      if(emailPhoneValid) {
+      if(PhoneValidator()) {
         store.setState({
           formErrorsEmailPhone: '',
           phoneFieldFloatingFocusStyle: styles.accept.name,
@@ -126,7 +129,6 @@ const validateField = (fieldName, value) => {
 }
 
 const validateForm = () => {
-  console.log(`nameValid: ${store.getState().nameValid} emailValid: ${store.getState().emailPhoneValid} textValid: ${store.getState().textValid}`);
   store.setState({formValid: store.getState().emailPhoneValid &&
                             store.getState().nameValid && store.getState().textValid});
   if(store.getState().formValid) console.log('Form Validated Succesfully');
@@ -139,7 +141,6 @@ const value = e.target.value;
 store.setState({[name]: value});
 validateField(name, value);
 }
-
 export const handleBlur = (e) => {
 switch (e.target.name) {
   case 'name':
@@ -152,25 +153,29 @@ switch (e.target.name) {
     });
   }
     break;
-  case 'emailPhone':
-    if(e.target.value.length === 0) {
-      store.setState({
-      formErrorsEmailPhone: 'Необходимо заполнить это поле',
-      phoneFieldErrorStyle: styles.warn.name,
-      phoneFieldFloatingFocusStyle: styles.warn.name,
-      phoneFieldBorderStyle: styles.warn.underline
-    });
-  }
+    case 'emailPhone':
+      if(e.target.value.length === 0) {
+        store.setState({
+        formErrorsEmailPhone: 'Необходимо заполнить это поле',
+        phoneFieldErrorStyle: styles.warn.name,
+        phoneFieldFloatingFocusStyle: styles.warn.name,
+        phoneFieldBorderStyle: styles.warn.underline
+      });
+    }
     break;
-  case 'text':
-    if(e.target.value.length === 0) {
-      store.setState({
-      formErrorsText: 'Необходимо заполнить это поле',
-      textFieldErrorStyle: styles.warn.name,
-      textFieldFloatingFocusStyle: styles.warn.name,
-      textFieldBorderStyle: styles.warn.underline
-    });
-  }
+    case 'text':
+      if(e.target.value.length === 0) {
+        store.setState({
+        formErrorsText: 'Необходимо заполнить это поле',
+        textFieldErrorStyle: styles.warn.name,
+        textFieldFloatingFocusStyle: styles.warn.name,
+        textFieldBorderStyle: styles.warn.underline
+      });
+    }
     break;
+  }
 }
+
+export const sendMail = (e) => {
+  console.log(`Имя: ${store.getState().name} \n Телефон ${store.getState().emailPhone} \n Текст сообщения ${store.getState().text}` );
 }
