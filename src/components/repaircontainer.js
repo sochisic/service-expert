@@ -38,11 +38,11 @@ class RepairContainer extends Component {
         <RaisedButton
           label="Связаться с нами"
           labelPosition="after"
-          primary={false}
+          primary={true}
           icon={<Message />}
           style={styles.button}
           className="RepairContainer--button"
-          backgroundColor="#2196F3"
+
           labelStyle={styles.costbutton.label}
         />
         <FlatButton
@@ -54,6 +54,7 @@ class RepairContainer extends Component {
           labelStyle={styles.costbutton.label}
           className="RepairContainer--costbutton"
           backgroundColor="hsla(0, 0%, 100%, 0)"
+
         />
       </div>
     );

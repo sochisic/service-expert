@@ -40,6 +40,7 @@ class HeaderButton extends Component {
             iconStyle={styles.mediumIcon}
             style={styles.medium}
             onClick={this.props.drawerToggle}
+
           >
             <Menu />
           </IconButton>

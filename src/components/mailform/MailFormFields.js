@@ -77,13 +77,14 @@ const styles = {
           label="Отправить"
           labelPosition="after"
           className="MailForm--Fields-Button"
-          backgroundColor={lightBlue800}
+          primary={true}
           icon={<ActionSend color={fullWhite} />}
           buttonStyle={styles.button}
           labelStyle={styles.label}
           disabled={ !formValid }
           onBlur={ handleBlur }
           onClick={ sendMail }
+
         />
       </div>
     ));
