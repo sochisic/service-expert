@@ -1,27 +1,6 @@
 .App--Wrapper {
   display: grid;
-  grid-template-rows: 120px 400px 500px;
-  grid-template-columns:
-  [full-start] minmax(1em, 1fr)
-  [main-start] minmax(0, 50em) [main-end]
-  minmax(1em, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(1em, 1fr) [main-start]
+    minmax(0, 75em) [main-end] minmax(1em, 1fr) [full-end];
+  grid-template-rows: 120px 1fr;
 }
-
-/*.App--Intro {
-  font-size: large;
-  grid-row: 2 / 3;
-  grid-column: main;
-}*/
-
-.App--RepairContainer {
-  grid-row: 2 / 4;
-  grid-column: main;
-  border: 1px dotted black;
-
-}
-
-/*.App--Content {
-  grid-column: main;
-  grid-row: 2 / 3;
-  border: 1px dotted black;
-}*/

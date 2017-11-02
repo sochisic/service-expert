@@ -1,26 +1,21 @@
-import React, { Component } from 'react';
-import './styles/app.css';
-import './styles/appwraper.css';
-import Header from './components/header';
-import Intro from './components/intro.js';
-import RepairContainer from './components/repaircontainer';
-import Content from './components/content';
-import SimpleMap from './components/map';
-import FormContainer from './components/formcontainer';
-import Social from './components/social'
-import Footer from './components/footer';
-import Drawer from './components/drawer';
-
-
-
-
-
-
+import React, { Component } from "react";
+import "./styles/app.css";
+import "./styles/appwraper.css";
+import "./components/maincontainer/maincontainer.css"
+import Header from "./components/header";
+import Intro from "./components/intro.js";
+import RepairContainer from "./components/repaircontainer";
+import Content from "./components/content";
+import SimpleMap from "./components/map";
+import FormContainer from "./components/formcontainer";
+import Social from "./components/social";
+import Footer from "./components/footer";
+import Drawer from "./components/drawer";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {open: false};
+    this.state = { open: false };
     this.handleToggle = this.handleToggle.bind(this);
   }
 
@@ -39,7 +34,7 @@ class App extends Component {
         <Social />
         <Footer />
       </div>
-        );
+    );
   }
 }
 

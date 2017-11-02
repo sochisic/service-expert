@@ -1,5 +1,5 @@
-import { createStore } from '../../../node_modules/redux-zero';
-import { lightBlue800 } from '../../../node_modules/material-ui/styles/colors';
+import { createStore } from "../../../node_modules/redux-zero";
+import { lightBlue800 } from "../../../node_modules/material-ui/styles/colors";
 
 const styles = {
   name: {
@@ -11,25 +11,25 @@ const styles = {
 };
 
 const initialState = {
-  name: '',
-  emailPhone: '',
-  text: '',
+  name: "",
+  emailPhone: "",
+  text: "",
   nameValid: false,
   emailPhoneValid: false,
   textValid: false,
-  formErrorsName: '',
-  formErrorsEmailPhone: '',
-  formErrorsText: '',
+  formErrorsName: "",
+  formErrorsEmailPhone: "",
+  formErrorsText: "",
   formValid: false,
-  nameFieldErrorStyle: '',
+  nameFieldErrorStyle: "",
   nameFieldFloatingFocusStyle: styles.name,
   nameFieldBorderStyle: styles.underline,
-  phoneFieldErrorStyle: '',
+  phoneFieldErrorStyle: "",
   phoneFieldFloatingFocusStyle: styles.name,
   phoneFieldBorderStyle: styles.underline,
-  textFieldErrorStyle: '',
+  textFieldErrorStyle: "",
   textFieldFloatingFocusStyle: styles.name,
-  textFieldBorderStyle: styles.underline,
+  textFieldBorderStyle: styles.underline
 };
 
 const store = createStore(initialState);
