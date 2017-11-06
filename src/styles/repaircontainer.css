@@ -1,39 +1,33 @@
 .App--RepairContainer {
-  /*border: 1px dotted #281596;*/
-  /*justify-content: center;*/
-
   border: 2px dotted tomato;
-  /*justify-content: flex-end;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.RepairContainer--ButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 .RepairContainer--button {
-
+  height: 36px;
 }
 
 .RepairContainer--costbutton {
-
+  height: 37px;
 }
 
-/*.prices--list {
-  width: 100%;
-  grid-column: 1 / 3;
-  grid-row: 2 / 3;
-  margin-left: auto;
-  margin-right: auto;
+@media (max-width: 480px) {
+  .RepairContainer--ButtonContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .RepairContainer--button,
+  .RepairContainer--costbutton {
+    width: 100%;
+    align-self: center;
+  }
 }
-
-.prices--list ul {
-  padding: 0;
-}
-
-.prices--list li {
-  list-style: none;
-}
-
-.prices--list li:nth-child(odd) {
-  background: rgba(163, 122, 218, 0.19);
-}
-
-.prices--list li:nth-child(even) {
-  background: white;
-}*/

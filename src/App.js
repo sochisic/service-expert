@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./styles/app.css";
 import "./styles/appwraper.css";
-import "./components/maincontainer/maincontainer.css"
+import "./components/repaircontainer/maincontainer.css"
 import Header from "./components/header";
 import Intro from "./components/intro.js";
-import RepairContainer from "./components/repaircontainer";
+import RepairContainer from "./components/repaircontainer/repaircontainer";
 import Content from "./components/content";
 import SimpleMap from "./components/map";
 import FormContainer from "./components/formcontainer";

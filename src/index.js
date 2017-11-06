@@ -16,10 +16,6 @@ const customTheme = getMuiTheme({
     primary2Color: blue700,
     primary3Color: grey400,
   },
-  icon: {
-    backgroundColor: grey900
-  }
-
 });
 
 ReactDOM.render(
