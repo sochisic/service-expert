@@ -175,7 +175,18 @@ export const handleBlur = e => {
 
 export const sendMail = e => {
   console.log(
-    `Имя: ${store.getState().name}\nТелефон ${store.getState()
-      .emailPhone}\nТекст сообщения ${store.getState().text}`
+    `Имя: ${store.getState().name}\nТелефон: ${store.getState()
+      .emailPhone}\nТекст сообщения: ${store.getState().text}`
   );
+};
+
+export const rewind = e => {
+
+  let elem = document.querySelector('.MailForm');
+  console.log(e.target, e, elem);
+  let elemHeight = elem.getBoundingClientRect().height;
+  let clientHeight = document.documentElement.clientHeight;
+  console.log(elemHeight);
+  elem.scrollIntoView();
+  document.documentElement.scrollTop = document.documentElement.scrollTop - ((clientHeight - elemHeight) / 2);
 };

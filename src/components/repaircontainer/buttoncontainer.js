@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import FlatButton from "../../../node_modules/material-ui/RaisedButton";
-import RaisedButton from "../../../node_modules/material-ui/RaisedButton";
-import Message from "../../../node_modules/material-ui/svg-icons/communication/message";
-import Cost from "../../../node_modules/material-ui/svg-icons/editor/attach-money";
+import FlatButton from "material-ui/RaisedButton";
+import RaisedButton from "material-ui/RaisedButton";
+import Message from "material-ui/svg-icons/communication/message";
+import Cost from "material-ui/svg-icons/editor/attach-money";
 import "../../styles/repaircontainer.css"
+import { rewind } from '../actions/actions';
 
 
 const styles = {
@@ -32,12 +33,13 @@ class ButtonContainer extends Component {
       <div className="RepairContainer--ButtonContainer">
         <RaisedButton
           label="Связаться с нами"
-          labelPosition="before"
+          labelPosition="after"
           primary={true}
           icon={<Message />}
           style={styles.button}
           className="RepairContainer--button"
           labelStyle={styles.costbutton.label}
+          onClick={ rewind }
         />
         <RaisedButton
           label="Сколько стоит?"
