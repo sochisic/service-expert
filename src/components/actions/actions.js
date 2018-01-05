@@ -181,12 +181,67 @@ export const sendMail = e => {
 };
 
 export const rewind = e => {
-
   let elem = document.querySelector('.MailForm');
   console.log(e.target, e, elem);
   let elemHeight = elem.getBoundingClientRect().height;
   let clientHeight = document.documentElement.clientHeight;
   console.log(elemHeight);
-  elem.scrollIntoView();
-  document.documentElement.scrollTop = document.documentElement.scrollTop - ((clientHeight - elemHeight) / 2);
+  smoothScroll('MailForm');
+
+  // elem.scrollIntoView();
+  // document.documentElement.scrollTop = document.documentElement.scrollTop - ((clientHeight - elemHeight) / 2);
 };
+
+// ru: Плавная прокрутка до элемента
+// en: smooth rewind to elem
+
+function currentYPosition() {
+    // Firefox, Chrome, Opera, Safari
+    // if (self.pageYOffset) return self.pageYOffset;
+    // Internet Explorer 6 - standards mode
+    if (document.documentElement && document.documentElement.scrollTop)
+        return document.documentElement.scrollTop;
+    // Internet Explorer 6, 7 and 8
+    if (document.body.scrollTop) return document.body.scrollTop;
+    return 0;
+}
+
+
+function elmYPosition(eID) {
+    var elm = document.getElementById(eID);
+    var y = elm.offsetTop;
+    var node = elm;
+    var elmHeight = elm.getBoundingClientRect().height;
+    var clientHeight = document.documentElement.clientHeight;
+    while (node.offsetParent && node.offsetParent != document.body) {
+        node = node.offsetParent;
+        y += node.offsetTop;
+    }
+    var y = y - ((clientHeight - elmHeight) / 2);
+    return y;
+}
+
+
+function smoothScroll(eID) {
+    var startY = currentYPosition();
+    var stopY = elmYPosition(eID);
+    var distance = stopY > startY ? stopY - startY : startY - stopY;
+    if (distance < 100) {
+        document.documentElement.scrollTo(0, stopY); return;
+    }
+    var speed = Math.round(distance / 100);
+    if (speed >= 20) speed = 20;
+    var step = Math.round(distance / 25);
+    var leapY = stopY > startY ? startY + step : startY - step;
+    var timer = 0;
+    if (stopY > startY) {
+        for ( var i=startY; i<stopY; i+=step ) {
+            setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+            leapY += step; if (leapY > stopY) leapY = stopY; timer++;
+        } return;
+    }
+    for ( var i=startY; i>stopY; i-=step ) {
+        setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+        leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+    }
+}

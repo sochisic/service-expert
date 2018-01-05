@@ -5,7 +5,7 @@ class MailForm extends Component {
 
   render() {
     return (
-      <div className="MailForm">
+      <div className="MailForm" id="MailForm">
         <div>Оставьте нам сообщение</div>
         <MailFormFields />
       </div>
