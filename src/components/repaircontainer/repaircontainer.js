@@ -4,6 +4,7 @@ import "../../styles/repaircontainer.css";
 import Prices from "../../components/prices";
 import MainContainer from "./maincontainer";
 import ButtonContainer from "./buttoncontainer";
+import RewardsContainer from './rewardscontainer';
 
 
 
@@ -15,6 +16,7 @@ class RepairContainer extends Component {
       <div className="App--RepairContainer">
         <MainContainer />
         <ButtonContainer />
+        <RewardsContainer />
       </div>
     );
   }

@@ -217,6 +217,8 @@ function elmYPosition(eID) {
         node = node.offsetParent;
         y += node.offsetTop;
     }
+    // ru: Центровка элемента по середине экрана
+    // en: Positioning elm in the middle 
     var y = y - ((clientHeight - elmHeight) / 2);
     return y;
 }

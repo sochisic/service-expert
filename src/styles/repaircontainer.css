@@ -31,3 +31,34 @@
     align-self: center;
   }
 }
+
+.rewardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-column-gap: 1rem;
+  grid-row:
+}
+
+.rewardCard {
+  background-color: rgba(117, 190, 218, 0.4);
+  width: 220px;
+  padding: 10px 0px 10px 0px;
+  margin: 20px 0 20px 0;
+  border: 1px solid black;
+  border-radius: 25px;
+  box-shadow: 13px 14px 35px -12px rgba(48, 112, 179, 1);;
+}
+
+.rewardCardIcon {
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+.rewardCardAmount {
+  font-size: 2.2rem;
+  background-color: tomato;
+}
+
+.rewardCardText {
+  padding: 15px 0 10px 0;
+}

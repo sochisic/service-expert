@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import '../styles/formcontainer.css';
-import Location from '../../node_modules/material-ui/svg-icons/communication/location-on';
-import Mail from '../../node_modules/material-ui/svg-icons/communication/email';
-import Phone from '../../node_modules/material-ui/svg-icons/action/settings-phone';
+import Location from 'material-ui/svg-icons/communication/location-on';
+import Mail from 'material-ui/svg-icons/communication/email';
+import Phone from 'material-ui/svg-icons/action/settings-phone';
 import {indigo700,
 lightBlue800
-, pink500} from '../../node_modules/material-ui/styles/colors';
+, pink500} from 'material-ui/styles/colors';
 
 
 
