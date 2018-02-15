@@ -14,7 +14,7 @@ body {
   display: grid;
   grid-template-columns: [full-start] minmax(1em, 1fr) [main-start]
     minmax(0, 75em) [main-end] minmax(1em, 1fr) [full-end];
-  grid-template-rows: 120px 900px 1fr minmax(20vh, auto) 70px 100px;
+  grid-template-rows: 120px minmax(850px, auto) 1fr minmax(20vh, auto) 70px 100px;
 }
 
 .App--Wrapper {

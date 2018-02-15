@@ -9,7 +9,7 @@ class MainContainer extends Component {
       <div className="RepairContainer--MainContainer">
         <h1>Профессиональный ремонт iPhone в городе Сочи</h1>
         <h1>Многолетний опыт работы с продукцией Apple</h1>
-        <h2>срочный ремонт / расположение центр г. Сочи</h2>
+        <h2>срочный ремонт / расположение: Центр г. Сочи, ТЦ Атриум оф. 201</h2>
 
       </div>
     );
