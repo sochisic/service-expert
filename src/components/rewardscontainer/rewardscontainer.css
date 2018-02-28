@@ -1,0 +1,31 @@
+.rewardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-column-gap: 1rem;
+  justify-content: space-around;
+}
+
+.rewardCard {
+  background-color: rgba(117, 190, 218, 0.4);
+  min-width: 220px;
+  width: 75%;
+  padding: 10px 0px 10px 0px;
+  margin: 20px auto 20px auto;
+  border: 1px solid black;
+  border-radius: 25px;
+  box-shadow: 13px 14px 35px -12px rgba(48, 112, 179, 1);
+}
+
+.rewardCardIcon {
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+.rewardCardAmount {
+  font-size: 2.2rem;
+  background-color: tomato;
+}
+
+.rewardCardText {
+  padding: 15px 0 10px 0;
+}

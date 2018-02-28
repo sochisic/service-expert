@@ -4,8 +4,9 @@ import "../../styles/repaircontainer.css";
 import Prices from "../../components/prices";
 import MainContainer from "./maincontainer";
 import ButtonContainer from "./buttoncontainer";
-import RewardsContainer from './rewardscontainer';
-import InstagramEmbedContainer from './instagramcontainer';
+import RewardsContainer from '../rewardscontainer/rewardscontainer';
+import InstagramEmbedContainer from '../instagramcontainer/instagramcontainer';
+import "../instagramcontainer/instagramcontainer.css";
 
 
 
