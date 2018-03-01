@@ -7,6 +7,7 @@
   width: 100%;
 }
 
+
 .InfoForm--Container {
   padding: 1rem;
   min-height: 20vh;
@@ -30,13 +31,12 @@
 
 .InfoForm--title,
 .MailForm--title {
-  /*padding-top: 5px;*/
+  color: #424242;
   font-size: 1.6rem;
   font-weight: 400;
   height: auto;
   min-height: 30px;
   align-self: center;
-  /*width: 300px;*/
 }
 
 div[class^="InfoForm--item"] {

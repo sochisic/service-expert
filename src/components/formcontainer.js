@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import MailForm from './mailform/mailform';
+import MailFormFields from './mailform/MailFormFields';
 import InfoForm from './infoform';
 import '../styles/formcontainer.css';
+import Paper from 'material-ui/Paper';
+
 
 
 class FormContainer extends Component {
@@ -16,7 +18,7 @@ class FormContainer extends Component {
         </div>
         <div className="MailForm--Container">
           <h2 className="MailForm--title">Задайте вопрос или напишите нам сообщение</h2>
-          <MailForm />
+          <MailFormFields />
         </div>
         </div>
         );

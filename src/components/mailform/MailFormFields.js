@@ -10,6 +10,7 @@ import Heart from '../../img/heart_24px.svg';
 import { connect } from '../../../node_modules/redux-zero';
 import { handleUserInput, handleBlur, sendMail } from '../actions/actions';
 
+
 const mapToProps = ({ count, name, emailPhone, text, formErrorsName, formErrorsText, formErrorsEmailPhone, formValid, nameFieldErrorStyle, nameFieldFloatingFocusStyle, nameFieldBorderStyle, phoneFieldErrorStyle, phoneFieldFloatingFocusStyle, phoneFieldBorderStyle, textFieldErrorStyle, textFieldFloatingFocusStyle, textFieldBorderStyle}) => ({ count, name, emailPhone, text, formErrorsName, formErrorsText, formErrorsEmailPhone, formValid, nameFieldErrorStyle, nameFieldFloatingFocusStyle, nameFieldBorderStyle, phoneFieldErrorStyle, phoneFieldFloatingFocusStyle, phoneFieldBorderStyle, textFieldErrorStyle, textFieldFloatingFocusStyle, textFieldBorderStyle});
 
 
@@ -29,7 +30,7 @@ const styles = {
 };
 
   export default connect( mapToProps )(({ name, emailPhone, text, formErrorsName, formErrorsText, formErrorsEmailPhone, formValid, nameFieldErrorStyle, nameFieldFloatingFocusStyle, nameFieldBorderStyle, phoneFieldErrorStyle, phoneFieldFloatingFocusStyle, phoneFieldBorderStyle, textFieldErrorStyle, textFieldFloatingFocusStyle, textFieldBorderStyle }) => (
-      <div>
+      <div className="MailForm" id="MailForm">
         <TextField
           hintText=""
           fullWidth={true}

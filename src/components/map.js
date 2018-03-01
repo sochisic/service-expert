@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import GoogleMapReact from '../../node_modules/google-map-react';
+import GoogleMapReact from 'google-map-react';
 import iphone from '../img/iphone.svg';
 import '../styles/app.css';
 

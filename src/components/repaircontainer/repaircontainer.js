@@ -7,9 +7,15 @@ import ButtonContainer from "./buttoncontainer";
 import RewardsContainer from '../rewardscontainer/rewardscontainer';
 import InstagramEmbedContainer from '../instagramcontainer/instagramcontainer';
 import "../instagramcontainer/instagramcontainer.css";
+import Divider from 'material-ui/Divider';
 
 
-
+const style = {
+  backgroundColor: "#FFCC80",
+  height: 2,
+  marginTop: 50,
+  marginBottom: 50
+}
 
 
 class RepairContainer extends Component {
@@ -18,8 +24,11 @@ class RepairContainer extends Component {
       <div className="App--RepairContainer">
         <MainContainer />
         <ButtonContainer />
+        <Divider style={style} />
         <RewardsContainer />
+        <Divider style={style} />
         <InstagramEmbedContainer />
+        <Divider style={style} />
       </div>
     );
   }
