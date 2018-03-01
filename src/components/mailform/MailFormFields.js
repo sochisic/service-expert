@@ -7,7 +7,7 @@ import { lightBlue800, orange500, green800
  } from '../../../node_modules/material-ui/styles/colors';
 import '../../styles/formcontainer.css';
 import Heart from '../../img/heart_24px.svg';
-import { connect } from '../../../node_modules/redux-zero';
+import { connect } from 'redux-zero';
 import { handleUserInput, handleBlur, sendMail } from '../actions/actions';
 
 

@@ -15,6 +15,12 @@
 
 .MailForm--Container {
   padding: 1rem;
+
+}
+
+.MailForm--Container_border {
+  border: 3px solid #FFCC80;
+  border-radius: 20px;
 }
 
 .MailForm {

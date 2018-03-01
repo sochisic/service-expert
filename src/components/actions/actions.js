@@ -28,7 +28,32 @@ const validateField = (fieldName, value) => {
   let nameValid, emailPhoneValid, textValid;
   switch (fieldName) {
     case "name":
+
+      let reg = new RegExp(/^((([a-zа-яА-Я]+)([- _])?)+([a-zа-яА-Я]+)?)$/);
+
+      if (value.length === 0) {
+        store.setState({
+          formErrorsName: "Необходимо заполнить это поле",
+          nameFieldErrorStyle: styles.warn.name,
+          nameFieldFloatingFocusStyle: styles.warn.name,
+          nameFieldBorderStyle: styles.warn.underline
+        });
+        break;
+      }
+
+      if(!reg.test(value) && value) {
+        store.setState({
+          formErrorsName: "В этом поле должны быть только буквенные символы!",
+          nameFieldErrorStyle: styles.warn.name,
+          nameFieldFloatingFocusStyle: styles.warn.name,
+          nameFieldBorderStyle: styles.warn.underline,
+          nameValid: false
+        });
+        break;
+      }
+
       nameValid = value.length <= 25 && value.length > 3 ? true : false;
+
       if (nameValid) {
         store.setState({
           formErrorsName: "",
@@ -37,6 +62,7 @@ const validateField = (fieldName, value) => {
           nameValid: true
         });
       }
+
       if (!nameValid && value.length >= 25) {
         store.setState({
           formErrorsName: "Слишком длинное имя!",
@@ -46,6 +72,7 @@ const validateField = (fieldName, value) => {
           nameValid: false
         });
       }
+
       if (!nameValid && value.length < 3) {
         store.setState({
           formErrorsName: "Слишком короткое имя!",
@@ -57,10 +84,10 @@ const validateField = (fieldName, value) => {
       }
       break;
     case "emailPhone":
-      var regExp = new RegExp(
+      let regExp = new RegExp(
         /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/
       );
-      var regExp2 = new RegExp(/[0-9]/, "g");
+      let regExp2 = new RegExp(/[0-9]/, "g");
       const PhoneValidator = () => {
         if (!regExp.test(value)) return false;
         if (
@@ -218,7 +245,7 @@ function elmYPosition(eID) {
         y += node.offsetTop;
     }
     // ru: Центровка элемента по середине экрана
-    // en: Positioning elm in the middle 
+    // en: Positioning elm in the middle
     var y = y - ((clientHeight - elmHeight) / 2);
     return y;
 }
