@@ -29,7 +29,7 @@ const validateField = (fieldName, value) => {
   switch (fieldName) {
     case "name":
 
-      let reg = new RegExp(/^((([a-zа-яА-Я]+)([- _])?)+([a-zа-яА-Я]+)?)$/);
+      let reg = new RegExp(/^((([a-zа-яА-Я]+)([- _])?)+([a-zа-яА-Я]+)?)$/, "i");
 
       if (value.length === 0) {
         store.setState({
