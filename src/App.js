@@ -8,7 +8,7 @@ import RepairContainer from "./components/repaircontainer/repaircontainer";
 import Content from "./components/content";
 import SimpleMap from "./components/map";
 import FormContainer from "./components/formcontainer";
-import Social from "./components/social";
+import Social from "./components/social/social";
 import Footer from "./components/footer";
 import Drawer from "./components/drawer";
 

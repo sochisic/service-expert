@@ -1,0 +1,17 @@
+.RewindToTopButton {
+  display: flex;
+  float: right;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  border-radius: 50%;
+  height: 80px;
+  bottom: 50px;
+  right: 50px;
+  opacity: 0.6;
+}
+
+.RewindToTopButton_disabled {
+  display: none;
+}
