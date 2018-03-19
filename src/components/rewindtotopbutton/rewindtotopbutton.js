@@ -25,7 +25,6 @@ export default class RewindToTopButton extends Component {
 
   handleScroll(event) {
       let scroll = document.documentElement.scrollTop;
-      console.log(scroll);
       if(scroll > 2500) {
         this.setState({
           className: 'RewindToTopButton'
