@@ -16,7 +16,7 @@ export default class Header extends Component {
 
   render() {
     return (
-      <div className="App--Header">
+      <div className="App--Header" id="Header">
         <img src={apple} className="Header--logo" alt="logo" />
         <h2 className="Header--text">Привет! Я телефонный мастер Вася!</h2>
         <HeaderButton drawerToggle={this.props.drawerToggle} />

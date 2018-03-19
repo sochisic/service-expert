@@ -207,20 +207,32 @@ export const sendMail = e => {
   );
 };
 
-export const rewind = e => {
-  let elem = document.querySelector('.MailForm');
-  console.log(e.target, e, elem);
-  let elemHeight = elem.getBoundingClientRect().height;
-  let clientHeight = document.documentElement.clientHeight;
-  console.log(elemHeight);
-  smoothScroll('MailForm');
 
-  // elem.scrollIntoView();
-  // document.documentElement.scrollTop = document.documentElement.scrollTop - ((clientHeight - elemHeight) / 2);
+export const rewind = e => {
+  // ru: Плавная прокрутка до элемента
+  // en: smooth rewind to elem
+  let target = e.target;
+  let rewindEl;
+
+  while(target) {
+      if(target.className == 'RepairContainer--ButtonContainer') {
+        rewindEl = 'RepairContainerButton';
+      }
+      if(target.className == 'RewindToTopButton') {
+        rewindEl = 'RewindToTopButton';
+      }
+    target = target.parentElement;
+  }
+  switch(rewindEl) {
+    case 'RepairContainerButton':
+      smoothScroll('MailForm');
+    break;
+    case 'RewindToTopButton':
+      smoothScroll('Header');
+    break;
+  }
 };
 
-// ru: Плавная прокрутка до элемента
-// en: smooth rewind to elem
 
 function currentYPosition() {
     // Firefox, Chrome, Opera, Safari
