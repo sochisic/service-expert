@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import IconButton from 'material-ui/IconButton';
-import Menu from '../../node_modules/material-ui/svg-icons/navigation/menu';
+import Menu from 'material-ui/svg-icons/navigation/menu';
 
 const styles = {
   smallIcon: {

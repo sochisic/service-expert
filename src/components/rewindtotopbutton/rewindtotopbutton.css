@@ -12,6 +12,6 @@
   opacity: 0.6;
 }
 
-.RewindToTopButton_disabled {
+.RewindToTopButton.disabled {
   display: none;
 }

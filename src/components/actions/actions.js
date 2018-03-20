@@ -213,16 +213,22 @@ export const rewind = e => {
   // en: smooth rewind to elem
   let target = e.target;
   let rewindEl;
+	console.log(e.target, target.textContent);
+	
 
   while(target) {
-      if(target.className == 'RepairContainer--ButtonContainer') {
-        rewindEl = 'RepairContainerButton';
+			if (target.className == "RepairContainer--ButtonContainer") {
+        rewindEl = "RepairContainerButton";
       }
       if(target.className == 'RewindToTopButton') {
         rewindEl = 'RewindToTopButton';
-      }
+			}
+			if(target.className == 'Drawer__ContactsButton') {
+				rewindEl = "RepairContainerButton";
+			}
     target = target.parentElement;
-  }
+	}
+	
   switch(rewindEl) {
     case 'RepairContainerButton':
       smoothScroll('MailForm');

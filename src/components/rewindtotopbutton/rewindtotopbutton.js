@@ -10,7 +10,7 @@ export default class RewindToTopButton extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        className: 'RewindToTopButton_disabled'
+        className: 'RewindToTopButton disabled'
     };
     this.handleScroll = this.handleScroll.bind(this);
   }
@@ -25,13 +25,13 @@ export default class RewindToTopButton extends Component {
 
   handleScroll(event) {
       let scroll = document.documentElement.scrollTop;
-      if(scroll > 2000) {
+      if(scroll > 1300) {
         this.setState({
           className: 'RewindToTopButton'
         })
       } else {
         this.setState({
-          className: 'RewindToTopButton_disabled'
+          className: 'RewindToTopButton disabled'
         })
       }
   }

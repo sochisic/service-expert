@@ -1,5 +1,5 @@
-import { createStore } from "../../../node_modules/redux-zero";
-import { lightBlue800 } from "../../../node_modules/material-ui/styles/colors";
+import { createStore } from "redux-zero";
+import { lightBlue800 } from "material-ui/styles/colors";
 
 const styles = {
   name: {
