@@ -225,6 +225,7 @@ export const rewind = e => {
 			}
 			if(target.className == 'Drawer__ContactsButton') {
 				rewindEl = "RepairContainerButton";
+
 			}
     target = target.parentElement;
 	}
@@ -292,3 +293,5 @@ function smoothScroll(eID) {
         leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
     }
 }
+
+export const handleToggleDrawer = () => this.setState({ drawerOpen: !this.state.drawerOpen });

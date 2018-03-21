@@ -29,7 +29,10 @@ const initialState = {
   phoneFieldBorderStyle: styles.underline,
   textFieldErrorStyle: "",
   textFieldFloatingFocusStyle: styles.name,
-  textFieldBorderStyle: styles.underline
+	textFieldBorderStyle: styles.underline,
+	drawerOpen: false,
+	repairDialogOpen: false,
+	
 };
 
 const store = createStore(initialState);

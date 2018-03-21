@@ -12,8 +12,6 @@ import Social from "./components/social/social";
 import Footer from "./components/footer";
 import Drawer from "./components/drawer";
 
-
-
 class App extends Component {
   constructor(props) {
     super(props);

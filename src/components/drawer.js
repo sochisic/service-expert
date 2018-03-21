@@ -14,7 +14,7 @@ export default class RightDrawer extends React.Component {
         <Drawer width={250} openSecondary={true} open={this.props.open}>
           <AppBar iconElementLeft={<IconButton>
                 <NavigationClose />
-              </IconButton>} onLeftIconButtonTouchTap={this.props.drawerToggle} title="Мастер Вася!" />
+              </IconButton>} onLeftIconButtonTouchTap={this.props.drawerToggle} title="Sochi Phone" />
           <MenuItem>iphone 4 и 4s</MenuItem>
           <MenuItem>iphone 5 и 5s,5c,5se</MenuItem>
           <MenuItem>iphone 6 и 6s</MenuItem>
@@ -26,7 +26,7 @@ export default class RightDrawer extends React.Component {
           <MenuItem>iphone X</MenuItem>
           <Divider inset={false} />
           <MenuItem onClick={rewind} className="Drawer__ContactsButton">
-            Связаться с нами
+            Сообщение нам
           </MenuItem>
           <MenuItem onClick={rewind} className="Drawer__ContactsButton">
             Контакты
