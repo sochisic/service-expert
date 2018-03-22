@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import iphone from '../img/iphone.svg';
 import '../styles/header.css';
 import '../styles/app.css';
@@ -9,19 +9,16 @@ import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import MenuItem from 'material-ui/MenuItem';
+import { connect } from "redux-zero/react";
 
+import actions from "./actions/actions";
 
+const mapToProps = ({}) => ({});
 
-export default class Header extends Component {
-
-  render() {
-    return (
+export default connect(mapToProps, actions)(({ handleToggleDrawer }) => (
       <div className="App--Header" id="Header">
         <img src={apple} className="Header--logo" alt="logo" />
         <h2 className="Header--text">Sochi Phone</h2>
-        <HeaderButton drawerToggle={this.props.drawerToggle} />
+        <HeaderButton drawerToggle={handleToggleDrawer} />
       </div>
-    );
-  }
-
-}
+));

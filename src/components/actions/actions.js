@@ -3,7 +3,7 @@ import {
   lightBlue800,
   orange500,
   lightGreenA700
-} from "../../../node_modules/material-ui/styles/colors";
+} from "material-ui/styles/colors";
 
 const styles = {
   accept: {
@@ -97,7 +97,6 @@ const validateField = (fieldName, value) => {
           return true;
       };
 
-      console.log(emailPhoneValid);
       if (!emailPhoneValid) {
         store.setState({
           formErrorsEmailPhone: "Введите корректный номер телефона!",
@@ -160,11 +159,13 @@ const validateForm = () => {
 };
 
 export const handleUserInput = e => {
+	
   const name = e.target.name;
   const value = e.target.value;
   store.setState({ [name]: value });
   validateField(name, value);
 };
+
 export const handleBlur = e => {
   switch (e.target.name) {
     case "name":
@@ -210,11 +211,10 @@ export const sendMail = e => {
 
 export const rewind = e => {
   // ru: Плавная прокрутка до элемента
-  // en: smooth rewind to elem
+	// en: smooth rewind to elem
+	
   let target = e.target;
   let rewindEl;
-	console.log(e.target, target.textContent);
-	
 
   while(target) {
 			if (target.className == "RepairContainer--ButtonContainer") {
@@ -225,7 +225,9 @@ export const rewind = e => {
 			}
 			if(target.className == 'Drawer__ContactsButton') {
 				rewindEl = "RepairContainerButton";
-
+				store.setState({
+					drawerOpen: false
+				})
 			}
     target = target.parentElement;
 	}
@@ -294,4 +296,8 @@ function smoothScroll(eID) {
     }
 }
 
-export const handleToggleDrawer = () => this.setState({ drawerOpen: !this.state.drawerOpen });
+const actions = store => ({
+  handleToggleDrawer: state => ({ drawerOpen: !state.drawerOpen })
+});
+
+export default actions;

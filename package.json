@@ -11,9 +11,6 @@
     "react-scripts": "^1.1.1",
     "redux-zero": "^4.11.0"
 	},
-	"devDependencies": {
-		"create-react-app": "^1.5.2"
-	},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

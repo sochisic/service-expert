@@ -1,4 +1,4 @@
-import { createStore } from "redux-zero";
+import createStore from "redux-zero";
 import { lightBlue800 } from "material-ui/styles/colors";
 
 const styles = {

@@ -4,7 +4,7 @@ import RaisedButton from "material-ui/RaisedButton";
 import Message from "material-ui/svg-icons/communication/message";
 import Cost from "material-ui/svg-icons/editor/attach-money";
 import "../../styles/repaircontainer.css"
-import { rewind } from '../actions/actions';
+// import { rewind } from '../actions/actions';
 
 
 const styles = {
@@ -40,10 +40,11 @@ class ButtonContainer extends Component {
           style={styles.button}
           className="RepairContainer--button"
           labelStyle={styles.costbutton.label}
-          onClick={ rewind }
+          onClick={ ()=>{} }
         />
         <RaisedButton
-          label="Сколько стоит?"
+					label="Сколько стоит?"
+					onClick={() => {}}
           labelPosition="after"
           primary={false}
           icon={<Cost />}
