@@ -21,8 +21,6 @@ export default connect(mapToProps, actions)(
               <NavigationClose />
             </IconButton>
           }
-          onLeftIconButtonTouchTap={() => {console.log('click!!!');
-					}}
           title="Sochi Phone"
         />
         <MenuItem>iphone 4 и 4s</MenuItem>
