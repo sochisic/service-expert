@@ -1,38 +1,38 @@
-import createStore from "redux-zero";
-import { lightBlue800 } from "material-ui/styles/colors";
+import createStore from 'redux-zero';
+import { lightBlue800 } from 'material-ui/styles/colors';
 
 const styles = {
   name: {
-    color: lightBlue800
+    color: lightBlue800,
   },
   underline: {
-    underline: lightBlue800
-  }
+    underline: lightBlue800,
+  },
 };
 
 const initialState = {
-  name: "",
-  emailPhone: "",
-  text: "",
+  name: '',
+  emailPhone: '',
+  text: '',
   nameValid: false,
   emailPhoneValid: false,
   textValid: false,
-  formErrorsName: "",
-  formErrorsEmailPhone: "",
-  formErrorsText: "",
+  formErrorsName: '',
+  formErrorsEmailPhone: '',
+  formErrorsText: '',
   formValid: false,
-  nameFieldErrorStyle: "",
+  nameFieldErrorStyle: '',
   nameFieldFloatingFocusStyle: styles.name,
   nameFieldBorderStyle: styles.underline,
-  phoneFieldErrorStyle: "",
+  phoneFieldErrorStyle: '',
   phoneFieldFloatingFocusStyle: styles.name,
   phoneFieldBorderStyle: styles.underline,
-  textFieldErrorStyle: "",
+  textFieldErrorStyle: '',
   textFieldFloatingFocusStyle: styles.name,
-	textFieldBorderStyle: styles.underline,
-	drawerOpen: false,
-	repairDialogOpen: false,
-	
+  textFieldBorderStyle: styles.underline,
+  drawerOpen: false,
+  repairDialogOpen: false,
+  repairDialogSelectedItem: 1,
 };
 
 const store = createStore(initialState);

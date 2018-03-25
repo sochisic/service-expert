@@ -1,16 +1,16 @@
-import React, { Component } from "react";
-import "./styles/app.css";
-import "./styles/appwraper.css";
-import "./components/repaircontainer/maincontainer.css"
-import Header from "./components/header";
-import Intro from "./components/intro.js";
-import RepairContainer from "./components/repaircontainer/repaircontainer";
-import Content from "./components/content";
-import SimpleMap from "./components/map";
-import FormContainer from "./components/formcontainer";
-import Social from "./components/social/social";
-import Footer from "./components/footer";
-import Drawer from "./components/drawer";
+import React, { Component } from 'react';
+import './styles/app.css';
+import './styles/appwraper.css';
+import './components/repaircontainer/maincontainer.css';
+import Header from './components/header';
+import Intro from './components/intro.js';
+import RepairContainer from './components/repaircontainer/repaircontainer';
+import Content from './components/content';
+import SimpleMap from './components/map';
+import FormContainer from './components/formcontainer';
+import Social from './components/social/social';
+import Footer from './components/footer';
+import Drawer from './components/drawer';
 
 class App extends Component {
   constructor(props) {
