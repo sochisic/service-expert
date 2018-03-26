@@ -5,11 +5,16 @@ import IconButton from 'material-ui/IconButton';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import MenuItem from 'material-ui/MenuItem';
 import Divider from 'material-ui/Divider';
+import phones from './repaircontainer/phonesCONST';
 
 import { connect } from 'redux-zero/react';
 import actions, { rewind } from './actions/actions';
 
 const mapToProps = ({ drawerOpen }) => ({ drawerOpen });
+
+const RenderMenuItem = ({ arr }) => (
+  <React.Fragment>{arr.map(element => <MenuItem key={element.key}>{element.name}</MenuItem>)}</React.Fragment>
+);
 
 export default connect(mapToProps, actions)(({ drawerOpen, handleToggleDrawer }) => (
   <div>
@@ -22,15 +27,7 @@ export default connect(mapToProps, actions)(({ drawerOpen, handleToggleDrawer })
         }
         title="Sochi Phone"
       />
-      <MenuItem>iphone 4 и 4s</MenuItem>
-      <MenuItem>iphone 5 и 5s,5c,5se</MenuItem>
-      <MenuItem>iphone 6 и 6s</MenuItem>
-      <MenuItem>iphone 6+ и 6s+</MenuItem>
-      <MenuItem>iphone 7</MenuItem>
-      <MenuItem>iphone 7+</MenuItem>
-      <MenuItem>iphone 8</MenuItem>
-      <MenuItem>iphone 8+</MenuItem>
-      <MenuItem>iphone X</MenuItem>
+      <RenderMenuItem arr={phones} />
       <Divider inset={false} />
       <MenuItem onClick={rewind} className="Drawer__ContactsButton">
         Сообщение нам

@@ -5,11 +5,9 @@ import { handleRepairDialogClose } from '../actions/actions';
 import store from '../store/store';
 
 const customContentStyle = {
-  width: '60%',
+  width: '',
   maxWidth: 'none',
 };
-
-console.log(this.props);
 
 const Buttons = [<FlatButton label="Закрыть" primary={true} onClick={handleRepairDialogClose} />];
 
