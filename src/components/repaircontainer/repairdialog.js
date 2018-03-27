@@ -3,9 +3,12 @@ import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import { handleRepairDialogClose } from '../actions/actions';
 import store from '../store/store';
+import RepairDialogContent from './repairdialogcontent';
+import styles from './repairdialogcontent.css';
+import './repairdialogcontent.css';
 
 const customContentStyle = {
-  width: '',
+  width: '100%',
   maxWidth: 'none',
 };
 
@@ -19,11 +22,18 @@ class repairdialog extends Component {
           title="Стоимость ремонта"
           actions={Buttons}
           modal={false}
-          contentStyle={customContentStyle}
+          // contentStyle={customContentStyle}
           open={store.getState().repairDialogOpen}
           onRequestClose={handleRepairDialogClose}
+          contentStyle={styles.dialog}
+          contentClassName="dialog"
+          style={styles}
+          bodyClassName="dialog"
+          titleClassName="RepairDialogContent__Title"
+          actionsContainerClassName="RepairDialogContent__actions"
         >
-          This dialog spans the entire width of the screen.
+          <RepairDialogContent />
+          {console.log(styles, customContentStyle)}
         </Dialog>
       </div>
     );
