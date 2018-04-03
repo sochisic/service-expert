@@ -12,9 +12,18 @@ const customContentStyle = {
   maxWidth: 'none',
 };
 
+let mediaQuery = () => {
+  if (window.matchMedia('(max-width: 400px)').matches) {
+    return {
+      width: '100%',
+      maxWidth: 'none',
+    };
+  }
+};
+
 const Buttons = [<FlatButton label="Закрыть" primary={true} onClick={handleRepairDialogClose} />];
 
-class repairdialog extends Component {
+class RepairDialog extends Component {
   render() {
     return (
       <div>
@@ -22,22 +31,21 @@ class repairdialog extends Component {
           title="Стоимость ремонта"
           actions={Buttons}
           modal={false}
-          // contentStyle={customContentStyle}
           open={store.getState().repairDialogOpen}
           onRequestClose={handleRepairDialogClose}
-          contentStyle={styles.dialog}
-          contentClassName="dialog"
-          style={styles}
+          className={styles.root}
           bodyClassName="dialog"
           titleClassName="RepairDialogContent__Title"
           actionsContainerClassName="RepairDialogContent__actions"
+          contentStyle={mediaQuery()}
+          autoScrollBodyContent={true}
         >
           <RepairDialogContent />
-          {console.log(styles, customContentStyle)}
         </Dialog>
+        {console.log(mediaQuery())}
       </div>
     );
   }
 }
 
-export default repairdialog;
+export default RepairDialog;
