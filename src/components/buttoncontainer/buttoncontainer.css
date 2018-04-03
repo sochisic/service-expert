@@ -1,0 +1,26 @@
+.ButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  grid-column: main;
+}
+
+.button {
+  height: 36px;
+}
+
+.costbutton {
+  height: 37px;
+}
+
+@media (max-width: 480px) {
+  .ButtonContainer {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .button,
+  .costbutton {
+    width: 100%;
+    align-self: center;
+  }
+}

@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import './styles/app.css';
-import './styles/appwraper.css';
-import './components/repaircontainer/maincontainer.css';
-import Header from './components/header';
-import Intro from './components/intro.js';
+import './components/firstscreen/firstscreen.css';
+import './components/maincontainer/maincontainer.css';
+import './components/buttoncontainer/buttoncontainer.css';
 import RepairContainer from './components/repaircontainer/repaircontainer';
-import Content from './components/content';
 import SimpleMap from './components/map';
 import FormContainer from './components/formcontainer';
 import Social from './components/social/social';
 import Footer from './components/footer';
 import Drawer from './components/drawer';
+
+import FirstScreen from './components/firstscreen/firstscreen';
 
 class App extends Component {
   constructor(props) {
@@ -24,15 +24,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App--Wrapper">
-          <Header drawerToggle={this.handleToggle} />
+        <FirstScreen />
+        <Drawer open={this.state.open} drawerToggle={this.handleToggle} />
+
+        {/* <div className="App--secondscreen">
           <RepairContainer />
-          <Drawer open={this.state.open} drawerToggle={this.handleToggle} />
         </div>
         <SimpleMap />
         <FormContainer />
         <Social />
-        <Footer />
+        <Footer /> */}
       </div>
     );
   }

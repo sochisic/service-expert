@@ -1,0 +1,52 @@
+.dialog {
+  width: 100%;
+  border: 3px solid blueviolet;
+}
+
+.RepairDialogContent__Title {
+  text-align: center;
+  border:3px solid aquamarine;
+}
+
+.RepairDialogContent__Container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: auto;
+  min-width: fit-content;
+}
+
+.RepairDialogContent__image {
+  flex: 1;
+  display: flex;
+  /* margin: auto; */
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.RepairDialogContent__text {
+    display: flex;
+  /* flex-wrap: wrap; */
+  /* flex-direction: column; */
+  /* flex: 1 1 50%; */
+  
+}
+
+.RepairDialogContent__actions {
+  display: flex;
+  justify-content: flex-end;
+  border: 2px solid sandybrown
+}
+
+.content {
+  width: 50%;
+}
+
+@media all and (max-width: 600px) {
+  .content {
+    width: 100%;
+  }
+  .RepairDialogContent__actions {
+    justify-content: center;
+  }
+}

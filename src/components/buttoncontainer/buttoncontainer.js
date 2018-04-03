@@ -2,10 +2,12 @@ import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import Message from 'material-ui/svg-icons/communication/message';
 import Cost from 'material-ui/svg-icons/editor/attach-money';
-import '../../styles/repaircontainer.css';
+// import '../../styles/repaircontainer.css';
+import './buttoncontainer.css';
+import '../firstscreen/firstscreen.css';
 import { connect } from 'redux-zero/react';
 import actions, { rewind } from '../actions/actions';
-import RepairDialog from '../repaircontainer/repairdialog';
+// import RepairDialog from '../repaircontainer/repairdialog';
 
 const styles = {
   button: {
@@ -30,7 +32,7 @@ const mapToProps = ({ repairDialogOpen, repairDialogSelectedItem }) => ({ repair
 
 export default connect(mapToProps, actions)(
   ({ repairDialogSelectedItem, repairDialogOpen, handleRepairDialogClose, handleRepairDialogOpen }) => (
-    <div className="RepairContainer--ButtonContainer">
+    <div className="ButtonContainer">
       <RaisedButton
         label="Связаться с нами"
         labelPosition="after"
@@ -52,7 +54,7 @@ export default connect(mapToProps, actions)(
         className="RepairContainer--costbutton"
         backgroundColor="hsla(0, 0%, 100%, 0)"
       />
-      <RepairDialog>This dialog spans the entire width of the screen.</RepairDialog>
+      {/* <RepairDialog>This dialog spans the entire width of the screen.</RepairDialog> */}
     </div>
   )
 );

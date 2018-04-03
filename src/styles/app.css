@@ -12,25 +12,34 @@ body {
 .App {
   text-align: center;
   display: grid;
-  grid-template-columns: [full-start] minmax(1em, 1fr) [main-start]
-    minmax(0, 75em) [main-end] minmax(1em, 1fr) [full-end];
-  grid-template-rows: 120px minmax(850px, auto) 1fr minmax(20vh, auto) 70px 100px;
+  grid-template-columns:  [full-start] minmax(1em, 1fr) 
+                          [main-start] minmax(0, 75em)
+                          [main-end] minmax(1em, 1fr)
+                          [full-end];
+  grid-template-rows: 100vh;
   position: relative;
 }
 
-.App--Wrapper {
-  background-image: url(../img/iphone_iphone_6_apple_101170_1920x1080.jpg);
+.App > .App--firstscreen {
   grid-column: full;
-  grid-row: 1 / 3;
 }
 
-.App--RepairContainer {
+.App--firstscreen {
+  background-image: url(../img/iphone_iphone_6_apple_101170_1920x1080.jpg);
+  grid-column: full;
+  /* grid-row: 1 / 2; */
+}
+
+.MainContainer {
   grid-column: main;
 }
 
+.ButtonContainer {
+  grid-column: main;
+}
 
-.maincontainer {
-
+/* .App--RepairContainer {
+  grid-column: main;
 }
 
 .App--SimpleMap {
@@ -40,7 +49,6 @@ body {
   grid-row: 3 / 4;
 }
 
-
 .App--Social {
   grid-row: 5 / 6;
   grid-column: main;
@@ -49,4 +57,4 @@ body {
 .App--Footer {
   grid-row: 6 / 7;
   grid-column: full;
-}
+} */

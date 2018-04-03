@@ -7,10 +7,10 @@ import RepairDialogContent from './repairdialogcontent';
 import styles from './repairdialogcontent.css';
 import './repairdialogcontent.css';
 
-const customContentStyle = {
-  width: '100%',
-  maxWidth: 'none',
-};
+// const customContentStyle = {
+//   width: '100%',
+//   maxWidth: 'none',
+// };
 
 let mediaQuery = () => {
   if (window.matchMedia('(max-width: 400px)').matches) {
@@ -18,6 +18,14 @@ let mediaQuery = () => {
       width: '100%',
       maxWidth: 'none',
     };
+  }
+};
+
+let mediaQueryBool = () => {
+  if (window.matchMedia('(max-width: 600px)').matches) {
+    return true;
+  } else {
+    return false;
   }
 };
 
@@ -38,11 +46,13 @@ class RepairDialog extends Component {
           titleClassName="RepairDialogContent__Title"
           actionsContainerClassName="RepairDialogContent__actions"
           contentStyle={mediaQuery()}
-          autoScrollBodyContent={true}
+          autoScrollBodyContent={mediaQueryBool()}
+          repositionOnUpdate={true}
         >
           <RepairDialogContent />
         </Dialog>
         {console.log(mediaQuery())}
+        {console.log(mediaQueryBool())}
       </div>
     );
   }
