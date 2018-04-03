@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './styles/app.css';
-import './components/firstscreen/firstscreen.css';
 import './components/maincontainer/maincontainer.css';
 import './components/buttoncontainer/buttoncontainer.css';
 import RepairContainer from './components/repaircontainer/repaircontainer';
@@ -11,6 +10,7 @@ import Footer from './components/footer';
 import Drawer from './components/drawer';
 
 import FirstScreen from './components/firstscreen/firstscreen';
+import styles from './components/firstscreen/firstscreen.css';
 
 class App extends Component {
   constructor(props) {

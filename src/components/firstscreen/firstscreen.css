@@ -11,12 +11,12 @@
                           [full-end];
 }
 
-.App--firstscreen > .ButtonContainer {
+/* .App--firstscreen > .ButtonContainer {
   grid-column: main;
 }
 
 .App--firstscreen > .MainContainer {
   grid-column: main;
-}
+} */
 
 

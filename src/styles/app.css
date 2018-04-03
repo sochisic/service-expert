@@ -20,23 +20,27 @@ body {
   position: relative;
 }
 
-.App > .App--firstscreen {
+/* .App > * {
   grid-column: full;
-}
+} */
 
 .App--firstscreen {
   background-image: url(../img/iphone_iphone_6_apple_101170_1920x1080.jpg);
   grid-column: full;
-  /* grid-row: 1 / 2; */
+  grid-row: 1 / 2;
 }
+
+/* .App--firstscreen > * {
+  grid-column: full;
+} */
 
 .MainContainer {
   grid-column: main;
 }
 
-.ButtonContainer {
+/* .ButtonContainer {
   grid-column: main;
-}
+} */
 
 /* .App--RepairContainer {
   grid-column: main;
