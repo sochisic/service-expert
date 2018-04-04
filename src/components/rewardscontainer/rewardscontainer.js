@@ -3,6 +3,7 @@ import '../../styles/repaircontainer.css';
 import './rewardscontainer.css';
 import RewardCard from './rewardcard';
 import { rewardsCONST } from './rewardsCONST';
+import Divider from 'material-ui/Divider';
 
 const iconStyles = {
   smallIcon: {
@@ -35,6 +36,13 @@ const iconStyles = {
   },
 };
 
+const style = {
+  backgroundColor: '#FFCC80',
+  height: 2,
+  marginTop: 50,
+  marginBottom: 50,
+};
+
 class Rewards extends Component {
   render() {
     return (
@@ -52,6 +60,7 @@ class Rewards extends Component {
           amount={rewardsCONST.accessibility.amount}
           text={rewardsCONST.accessibility.text}
         />
+        <Divider style={style} />
       </div>
     );
   }

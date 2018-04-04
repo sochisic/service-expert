@@ -3,8 +3,6 @@
   color: ffffff;
   display: flex;
   height: 12vh;
-  /* grid-template-columns: 200px 1fr 200px;
-  grid-template-rows: 120px; */
   min-width: 120px;
   opacity: 0.6;
 }
@@ -14,7 +12,7 @@
   font-size: 2rem;
   flex: 1;
   text-align: left;
-  /* text-indent: 25px; */
+
   text-indent: 5vw;
   line-height: 1vh;
 }
@@ -31,8 +29,6 @@
   justify-content: center;
   align-items: center;
   flex: 0 0 10vw;
-  /* margin: auto; */
-  /* width: 15vw; */
   height: 15vh;
 }
 
@@ -45,9 +41,8 @@
   .Header--text {
     font-size: 1.6em;
     text-align: right;
-    word-wrap: break-word;
     flex: 1 1 10vw;
-    line-height: 2vh;
-    
+    line-height: 1.5rem;
   }
 }
+

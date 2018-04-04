@@ -16,7 +16,7 @@ body {
                           [main-start] minmax(0, 75em)
                           [main-end] minmax(1em, 1fr)
                           [full-end];
-  grid-template-rows: 100vh;
+  grid-template-rows: 100vh 100vh;
   position: relative;
   min-width: 280px;
 }
@@ -26,11 +26,19 @@ body {
 }
 
 .App--firstscreen {
-  background-image: url(../img/iphone_iphone_6_apple_101170_1920x1080.jpg);
+  background-image: url('../img/iphone_iphone_6_apple_101170_1920x1080.jpg');
   grid-column: full;
   grid-row: 1 / 2;
   background-size: cover;
+  background-position: center;
 }
+
+.rewardsContainer {
+  grid-column: full;
+  height: 100vh;
+  grid-row: 2 / 3;
+}
+
 
 /* .App--firstscreen > * {
   grid-column: full;

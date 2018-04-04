@@ -1,14 +1,20 @@
 .rewardsContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  background-image: url('../../img/dims.jpg');
+  background-position: center;
+  background-size: auto;
+    display: flex;
+  /* grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-column-gap: 1rem;
+  justify-content: space-around; */
   justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .rewardCard {
   background-color: rgba(117, 190, 218, 0.4);
   min-width: 220px;
-  width: 75%;
+  /* width: 75%; */
   padding: 10px 0px 10px 0px;
   margin: 20px auto 20px auto;
   border: 1px solid black;
