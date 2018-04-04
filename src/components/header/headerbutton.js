@@ -33,20 +33,15 @@ const styles = {
 };
 
 class HeaderButton extends Component {
-    render() {
-      return (
-        <div className="Header--button">
-          <IconButton
-            iconStyle={styles.mediumIcon}
-            style={styles.medium}
-            onClick={this.props.drawerToggle}
-					>
-            <Menu />
-          </IconButton>
-        </div>
-      );
-    }
-
+  render() {
+    return (
+      <div className="Header--button">
+        <IconButton iconStyle={styles.mediumIcon} style={styles.medium} onClick={this.props.drawerToggle}>
+          <Menu />
+        </IconButton>
+      </div>
+    );
+  }
 }
 
 export default HeaderButton;

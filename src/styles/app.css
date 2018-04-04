@@ -18,16 +18,18 @@ body {
                           [full-end];
   grid-template-rows: 100vh;
   position: relative;
+  min-width: 280px;
 }
 
-/* .App > * {
+.App--Header {
   grid-column: full;
-} */
+}
 
 .App--firstscreen {
   background-image: url(../img/iphone_iphone_6_apple_101170_1920x1080.jpg);
   grid-column: full;
   grid-row: 1 / 2;
+  background-size: cover;
 }
 
 /* .App--firstscreen > * {
