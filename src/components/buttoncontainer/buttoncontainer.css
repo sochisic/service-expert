@@ -1,9 +1,26 @@
 .ButtonContainer {
   display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
   grid-column: main;
+  flex-wrap: wrap;
+}
+
+.ButtonWrapper {
+  width: 100%;
   height: fit-content;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.Buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.arrowDown {
+  height: 120px;
+  align-self: flex-end;
+  margin: 0 auto 0 auto;
 }
 
 .button {
@@ -15,7 +32,7 @@
 }
 
 @media (max-width: 480px) {
-  .ButtonContainer {
+  .Buttons {
     justify-content: center;
     flex-wrap: wrap;
     align-content: flex-start;

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../../styles/repaircontainer.css';
-import RewardsContainer from '../rewardscontainer/rewardscontainer';
 import InstagramEmbedContainer from '../instagramcontainer/instagramcontainer';
 import '../instagramcontainer/instagramcontainer.css';
 import Divider from 'material-ui/Divider';
@@ -17,7 +16,6 @@ class RepairContainer extends Component {
     return (
       <div className="App--RepairContainer">
         <Divider style={style} />
-        <RewardsContainer />
         <Divider style={style} />
         <InstagramEmbedContainer />
         <Divider style={style} />

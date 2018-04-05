@@ -16,7 +16,7 @@ body {
                           [main-start] minmax(0, 75em)
                           [main-end] minmax(1em, 1fr)
                           [full-end];
-  grid-template-rows: 100vh 100vh;
+  grid-template-rows: repeat(3, 100vh);
   position: relative;
   min-width: 280px;
 }
@@ -37,6 +37,12 @@ body {
   grid-column: full;
   height: 100vh;
   grid-row: 2 / 3;
+}
+
+.instagramContainer {
+  grid-column: full;
+  height: 100vh;
+  grid-row: 3 / 4;
 }
 
 

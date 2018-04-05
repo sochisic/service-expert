@@ -1,11 +1,18 @@
 .instagramContainer {
-  display: grid;
+  /* display: grid;
   max-width: 1200px;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-column-gap: 1rem;
-  justify-items: center;
+  justify-items: center; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url('../../img/dims.jpg');
+  background-position: center;
+  background-size: cover;
+  flex-wrap: wrap;
 }
-
+/* 
 .instagramContainer > div {
   min-width: 250px;
-}
+} */

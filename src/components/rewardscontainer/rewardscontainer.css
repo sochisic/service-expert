@@ -1,7 +1,7 @@
 .rewardsContainer {
-  background-image: url('../../img/dims.jpg');
+  background-image: url('../../img/engineering.jpg');
   background-position: center;
-  background-size: auto;
+  background-size: cover;
     display: flex;
   /* grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-column-gap: 1rem;

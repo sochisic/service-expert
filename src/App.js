@@ -12,6 +12,8 @@ import Drawer from './components/drawer';
 import RewardsContainer from './components/rewardscontainer/rewardscontainer';
 import FirstScreen from './components/firstscreen/firstscreen';
 import styles from './components/firstscreen/firstscreen.css';
+import InstagramEmbedContainer from './components/instagramcontainer/instagramcontainer';
+import './components/instagramcontainer/instagramcontainer.css';
 
 class App extends Component {
   constructor(props) {
@@ -28,7 +30,7 @@ class App extends Component {
         <FirstScreen />
         <Drawer open={this.state.open} drawerToggle={this.handleToggle} />
         <RewardsContainer />
-
+        <InstagramEmbedContainer />
         {/* <div className="App--secondscreen">
           <RepairContainer />
         </div>

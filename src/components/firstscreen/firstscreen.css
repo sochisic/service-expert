@@ -1,8 +1,4 @@
 .App--firstscreen {
-  /* display: grid;
-  grid-template-columns: [full-start] minmax(1em, 1fr) [main-start]
-    minmax(0, 75em) [main-end] minmax(1em, 1fr) [full-end];
-  grid-template-rows: 120px 1fr 100px; */
   grid-column: full;
   display: grid;
   grid-template-columns:  [full-start] minmax(1em, 1fr) 
@@ -10,13 +6,3 @@
                           [main-end] minmax(1em, 1fr)
                           [full-end];
 }
-
-/* .App--firstscreen > .ButtonContainer {
-  grid-column: main;
-}
-
-.App--firstscreen > .MainContainer {
-  grid-column: main;
-} */
-
-
