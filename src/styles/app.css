@@ -16,7 +16,7 @@ body {
                           [main-start] minmax(0, 75em)
                           [main-end] minmax(1em, 1fr)
                           [full-end];
-  grid-template-rows: repeat(3, 100vh);
+  grid-template-rows: repeat(4, 100vh);
   position: relative;
   min-width: 280px;
 }
@@ -45,6 +45,12 @@ body {
   grid-row: 3 / 4;
 }
 
+.App--forthscreen {
+  background-image: url('../img/winterolympics9_v88ibt.jpg');
+   grid-column: full;
+  height: 100vh;
+  grid-row: 4 / 5;
+}
 
 /* .App--firstscreen > * {
   grid-column: full;
