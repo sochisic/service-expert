@@ -1,13 +1,12 @@
-import React from "react";
-import TextField from "material-ui/TextField";
-import RaisedButton from "material-ui/RaisedButton";
-import ActionSend from "material-ui/svg-icons/content/send";
-import { fullWhite } from "material-ui/styles/colors";
-import { lightBlue800, orange500, green800 } from "material-ui/styles/colors";
-import "../../styles/formcontainer.css";
-import Heart from "../../img/heart_24px.svg";
-import { connect } from "redux-zero/react";
-import actions, { handleUserInput, handleBlur, sendMail } from "../actions/actions";
+import React from 'react';
+import TextField from 'material-ui/TextField';
+import RaisedButton from 'material-ui/RaisedButton';
+import ActionSend from 'material-ui/svg-icons/content/send';
+import { fullWhite } from 'material-ui/styles/colors';
+import { lightBlue800, orange500, green800 } from 'material-ui/styles/colors';
+import { connect } from 'redux-zero/react';
+import actions, { handleUserInput, handleBlur, sendMail } from '../actions/actions';
+import '../formcontainer/formcontainer.css';
 
 const mapToProps = ({
   count,
@@ -26,7 +25,7 @@ const mapToProps = ({
   phoneFieldBorderStyle,
   textFieldErrorStyle,
   textFieldFloatingFocusStyle,
-  textFieldBorderStyle
+  textFieldBorderStyle,
 }) => ({
   count,
   name,
@@ -44,22 +43,22 @@ const mapToProps = ({
   phoneFieldBorderStyle,
   textFieldErrorStyle,
   textFieldFloatingFocusStyle,
-  textFieldBorderStyle
+  textFieldBorderStyle,
 });
 
 const styles = {
   button: {
-    minWidth: "100px"
+    minWidth: '100px',
   },
   label: {
-    color: "white"
+    color: 'white',
   },
   name: {
-    color: lightBlue800
+    color: lightBlue800,
   },
   underline: {
-    underline: lightBlue800
-  }
+    underline: lightBlue800,
+  },
 };
 
 export default connect(mapToProps, actions)(
@@ -79,7 +78,7 @@ export default connect(mapToProps, actions)(
     phoneFieldBorderStyle,
     textFieldErrorStyle,
     textFieldFloatingFocusStyle,
-    textFieldBorderStyle
+    textFieldBorderStyle,
   }) => (
     <div className="MailForm" id="MailForm">
       <TextField

@@ -73,6 +73,7 @@ body {
   height: 400px;
   grid-column: full;
   grid-row: 3 / 4;
+  margin: auto;
 }
 
 .App--Social {
