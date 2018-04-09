@@ -1,0 +1,8 @@
+.App--forthscreen {
+  display: flex;
+  flex-direction: column;
+}
+
+.App--FormContainer {
+  margin: auto;
+}
