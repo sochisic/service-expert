@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import SimpleMap from '../map/map';
 import FormContainer from '../formcontainer/formcontainer';
 import styles from './ForthScreen.css';
 

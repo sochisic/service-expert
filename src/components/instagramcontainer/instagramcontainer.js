@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import InstagramCard from './instagramcard';
+import InstagramEmbed from 'react-instagram-embed';
 import './instagramcontainer.css';
 
 const width = 320;
@@ -8,7 +8,7 @@ class InstagramEmbedContainer extends Component {
   render() {
     return (
       <div className="instagramContainer">
-        <InstagramCard
+        <InstagramEmbed
           url="https://www.instagram.com/p/BfMZj_0ARFy"
           maxWidth={width}
           hideCaption={true}
@@ -19,7 +19,7 @@ class InstagramEmbedContainer extends Component {
           onAfterRender={() => {}}
           onFailure={() => {}}
         />
-        <InstagramCard
+        <InstagramEmbed
           url="https://www.instagram.com/p/BfMZc5TABWt"
           maxWidth={width}
           hideCaption={true}
@@ -30,7 +30,7 @@ class InstagramEmbedContainer extends Component {
           onAfterRender={() => {}}
           onFailure={() => {}}
         />
-        <InstagramCard
+        <InstagramEmbed
           url="https://www.instagram.com/p/BfMZDGmAZt9"
           maxWidth={width}
           hideCaption={true}
