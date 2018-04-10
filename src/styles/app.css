@@ -1,55 +1,52 @@
 * {
-  font-family: "Roboto", sans-serif;
-  /*font-style: italic;*/
-  /*font-weight: 400;*/
+    font-family: "Roboto", sans-serif;
+    /*font-style: italic;*/
+    /*font-weight: 400;*/
 }
 
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .App {
-  text-align: center;
-  display: grid;
-  grid-template-columns:  [full-start] minmax(1em, 1fr) 
-                          [main-start] minmax(0, 75em)
-                          [main-end] minmax(1em, 1fr)
-                          [full-end];
-  grid-template-rows: repeat(4, minmax(100vh, max-content));
-  position: relative;
-  min-width: 280px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: [full-start] minmax(1em, 1fr) [main-start] minmax(0, 75em) [main-end] minmax(1em, 1fr) [full-end];
+    grid-template-rows: repeat(4, minmax(100vh, max-content));
+    position: relative;
+    min-width: 280px;
 }
 
 .App--Header {
-  grid-column: full;
+    grid-column: full;
 }
 
 .App--firstscreen {
-  background-image: url('../img/iphone_iphone_6_apple_101170_1920x1080.jpg');
-  grid-column: full;
-  grid-row: 1 / 2;
-  background-size: cover;
-  background-position: center;
+    background-image: url("../img/iphone_iphone_6_apple_101170_1920x1080.jpg");
+    grid-column: full;
+    grid-row: 1 / 2;
+    background-size: cover;
+    background-position: center;
 }
 
 .rewardsContainer {
-  grid-column: full;
-  /* height: 100vh; */
-  grid-row: 2 / 3;
+    grid-column: full;
+    /* height: 100vh; */
+    grid-row: 2 / 3;
 }
 
 .instagramContainer {
-  grid-column: full;
-  /* height: 100vh; */
-  grid-row: 3 / 4;
+    grid-column: full;
+    /* height: 100vh; */
+    grid-row: 3 / 4;
 }
 
 .App--forthscreen {
-  background-image: url('../img/winterolympics9_v88ibt.jpg');
-   grid-column: full;
-  /* height: 100vh; */
-  grid-row: 4 / 5;
+    background-image: url("../img/winterolympics9_v88ibt.jpg");
+    grid-column: full;
+    /* height: 100vh; */
+    grid-row: 4 / 5;
 }
 
 /* .App--firstscreen > * {
@@ -57,7 +54,7 @@ body {
 } */
 
 .MainContainer {
-  grid-column: main;
+    grid-column: main;
 }
 
 /* .ButtonContainer {

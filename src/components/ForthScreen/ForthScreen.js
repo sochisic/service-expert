@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FormContainer from '../formcontainer/formcontainer';
+import Social from '../social/social';
 import styles from './ForthScreen.css';
 
 class ForthScreen extends Component {
@@ -7,6 +8,7 @@ class ForthScreen extends Component {
     return (
       <div className="App--forthscreen">
         <FormContainer />
+        <Social />
       </div>
     );
   }
