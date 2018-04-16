@@ -1,7 +1,7 @@
 import React from 'react';
 import './header.css';
 import '../../styles/app.css';
-import apple from '../../img/218px-Apple_Computer_Logo_rainbow.svg.png';
+import apple from '../../img/Apple-logo-white-md.png';
 import HeaderButton from './headerbutton';
 import { connect } from 'redux-zero/react';
 

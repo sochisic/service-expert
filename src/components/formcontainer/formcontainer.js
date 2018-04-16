@@ -14,6 +14,7 @@ class FormContainer extends Component {
         </div>
         <div className="MailForm--Container">
           <h2 className="MailForm--title">Задайте вопрос или напишите нам сообщение</h2>
+          <h3>Извините но данное поле находится в разработке!</h3>
           <MailFormFields />
         </div>
       </div>

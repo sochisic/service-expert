@@ -94,6 +94,7 @@ export default connect(mapToProps, actions)(
         errorStyle={nameFieldErrorStyle}
         floatingLabelFocusStyle={nameFieldFloatingFocusStyle}
         underlineFocusStyle={nameFieldBorderStyle}
+        disabled={true}
       />
       <br />
       <TextField
@@ -108,6 +109,7 @@ export default connect(mapToProps, actions)(
         errorStyle={phoneFieldErrorStyle}
         floatingLabelFocusStyle={phoneFieldFloatingFocusStyle}
         underlineFocusStyle={phoneFieldBorderStyle}
+        disabled={true}
       />
       <br />
       <TextField
@@ -124,6 +126,7 @@ export default connect(mapToProps, actions)(
         errorStyle={textFieldErrorStyle}
         floatingLabelFocusStyle={textFieldFloatingFocusStyle}
         underlineFocusStyle={textFieldBorderStyle}
+        disabled={true}
       />
       <br />
       <RaisedButton

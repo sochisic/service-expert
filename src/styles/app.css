@@ -13,7 +13,7 @@ body {
     text-align: center;
     display: grid;
     grid-template-columns: [full-start] minmax(1em, 1fr) [main-start] minmax(0, 75em) [main-end] minmax(1em, 1fr) [full-end];
-    grid-template-rows: repeat(4, minmax(100vh, max-content));
+    grid-template-rows: repeat(3, minmax(100vh, max-content));
     position: relative;
     min-width: 280px;
 }
@@ -30,23 +30,23 @@ body {
     background-position: center;
 }
 
-.rewardsContainer {
-    grid-column: full;
+/* .rewardsContainer { */
+    /* grid-column: full; */
     /* height: 100vh; */
-    grid-row: 2 / 3;
-}
+    /* grid-row: 2 / 3; */
+/* } */
 
 .instagramContainer {
     grid-column: full;
     /* height: 100vh; */
-    grid-row: 3 / 4;
+    grid-row: 2 / 3;
 }
 
 .App--forthscreen {
     background-image: url("../img/winterolympics9_v88ibt.jpg");
     grid-column: full;
     /* height: 100vh; */
-    grid-row: 4 / 5;
+    grid-row: 3 / 4;
 }
 
 /* .App--firstscreen > * {

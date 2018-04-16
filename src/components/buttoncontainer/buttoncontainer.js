@@ -78,7 +78,7 @@ export default connect(mapToProps, actions)(
             labelStyle={styles.costbutton.label}
             onClick={rewind}
           />
-          <RaisedButton
+          {/* <RaisedButton
             label="Сколько стоит?"
             onClick={handleRepairDialogOpen}
             labelPosition="after"
@@ -88,7 +88,7 @@ export default connect(mapToProps, actions)(
             labelStyle={styles.costbutton.label}
             className="RepairContainer--costbutton"
             backgroundColor="hsla(0, 0%, 100%, 0)"
-          />
+          /> */}
         </div>
       </div>
       <div className="arrowDown">

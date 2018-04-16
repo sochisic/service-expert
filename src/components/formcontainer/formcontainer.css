@@ -17,6 +17,10 @@
   padding: 1rem;
 }
 
+h3 {
+  color: #ff6347;
+}
+
 .MailForm--Container_border {
   border: 3px solid hsl(36, 100%, 75%);
   border-radius: 20px;

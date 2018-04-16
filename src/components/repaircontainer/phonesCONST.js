@@ -14,6 +14,7 @@ const phonesCONST = [
     price: {
       display: '4000',
       battery: '1000',
+      microphone: '1000',
     },
     img: 'https://avatars.mds.yandex.net/get-mpic/200316/img_id270362589725797013.png/9hq',
   },

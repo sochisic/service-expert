@@ -32,7 +32,7 @@ class App extends Component {
       <div className="App">
         <FirstScreen />
         <Drawer open={this.state.open} drawerToggle={this.handleToggle} />
-        <RewardsContainer />
+        {/* <RewardsContainer /> */}
         <InstagramEmbedContainer />
         <ForthScreen />
         {/*<FormContainer />

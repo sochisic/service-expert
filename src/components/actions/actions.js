@@ -198,9 +198,10 @@ export const rewind = e => {
 
   let target = e.target;
   let rewindEl;
+  console.log(e);
 
   while (target) {
-    if (target.className == 'RepairContainer--ButtonContainer') {
+    if (target.className == 'ButtonContainer') {
       rewindEl = 'RepairContainerButton';
     }
     if (target.className == 'RewindToTopButton') {
