@@ -11,8 +11,12 @@ const mapToProps = ({}) => ({});
 
 export default connect(mapToProps, actions)(({ handleToggleDrawer }) => (
   <div className="App--Header" id="Header">
-    <img src={apple} className="Header--logo" alt="logo" />
-    <h2 className="Header--text">Sochi Phone</h2>
+    <div className="Header--logo">
+      <img src={apple} alt="logo" />
+    </div>
+    <div className="Header--text">
+      <h2>Sochi Phone</h2>
+    </div>
     <HeaderButton drawerToggle={handleToggleDrawer} />
   </div>
 ));

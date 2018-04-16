@@ -36,7 +36,12 @@ class HeaderButton extends Component {
   render() {
     return (
       <div className="Header--button">
-        <IconButton iconStyle={styles.mediumIcon} style={styles.medium} onClick={this.props.drawerToggle}>
+        <IconButton
+          iconStyle={styles.mediumIcon}
+          style={styles.medium}
+          onClick={this.props.drawerToggle}
+          disabled={true}
+        >
           <Menu />
         </IconButton>
       </div>

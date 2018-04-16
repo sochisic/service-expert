@@ -44,6 +44,8 @@ body {
 
 .App--forthscreen {
     background-image: url("../img/winterolympics9_v88ibt.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     grid-column: full;
     /* height: 100vh; */
     grid-row: 3 / 4;
