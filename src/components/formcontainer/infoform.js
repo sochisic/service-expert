@@ -43,12 +43,12 @@ class InfoForm extends Component {
         <div className="InfoForm--item1">
           <Location style={iconStyles.mediumIcon} color={pink500} />
           <h4>Местонахождение</h4>
-          <div className="Item--text">ТЦ Атриум оф. 201</div>
+          <div className="Item--text">ТЦ Атриум 2этаж оф. 201</div>
         </div>
         <div className="InfoForm--item2">
           <Mail style={iconStyles.mediumIcon} color={lightBlue800} />
           <h4>Email</h4>
-          <div className="Item--text">Вася@мастер.ру</div>
+          <div className="Item--text">9000001212@mail.ru</div>
         </div>
         <div className="InfoForm--item3">
           <Phone style={iconStyles.mediumIcon} color={indigo700} />

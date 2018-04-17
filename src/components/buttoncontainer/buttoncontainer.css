@@ -15,6 +15,7 @@
 .Buttons {
   display: flex;
   flex-wrap: wrap;
+  
 }
 
 .arrowDown {
@@ -36,6 +37,7 @@
     justify-content: center;
     flex-wrap: wrap;
     align-content: flex-start;
+    width: 100%;
   }
   .button,
   .costbutton {
