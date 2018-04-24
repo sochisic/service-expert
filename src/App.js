@@ -4,7 +4,6 @@ import './styles/app.css';
 import './components/maincontainer/maincontainer.css';
 import './components/buttoncontainer/buttoncontainer.css';
 import './components/rewardscontainer/rewardscontainer.css';
-import Social from './components/social/social';
 import Footer from './components/footer';
 import Drawer from './components/drawer';
 import RewardsContainer from './components/rewardscontainer/rewardscontainer';
