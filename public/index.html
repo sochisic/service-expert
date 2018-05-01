@@ -11,7 +11,23 @@
     -->
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
   <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:200,300i,400" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:200,300i,400" rel="stylesheet"> -->
+  <style type="text/css">
+    .wf-loading * {
+      visibility: visible;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .wf-active * {
+      visibility: visible;
+      font-family: 'Roboto';
+    }
+
+    .wf-inactive * {
+      visibility: visible;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
   <title>Ремонт телефонов в Сочи</title>
 </head>
 
@@ -20,6 +36,18 @@
     You need to enable JavaScript to run this app.
   </noscript>
   <div id="root"></div>
+  <script>
+    WebFontConfig = {
+      google: { families: ['Roboto'] },
+    };
+
+    (function (d) {
+      var wf = d.createElement('script'), s = d.scripts[0];
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+      wf.async = true;
+      s.parentNode.insertBefore(wf, s);
+    })(document);
+  </script>
 </body>
 
 </html>

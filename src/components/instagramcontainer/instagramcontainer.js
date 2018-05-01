@@ -9,37 +9,22 @@ class InstagramEmbedContainer extends Component {
     return (
       <div className="instagramContainer">
         <InstagramEmbed
-          url="https://www.instagram.com/p/BfMZj_0ARFy"
+          url="https://www.instagram.com/p/BiOjqN9FJrz"
           maxWidth={width}
           hideCaption={true}
           containerTagName="div"
-          protocol=""
-          onLoading={() => {}}
-          onSuccess={() => {}}
-          onAfterRender={() => {}}
-          onFailure={() => {}}
         />
         <InstagramEmbed
-          url="https://www.instagram.com/p/BfMZc5TABWt"
+          url="https://www.instagram.com/p/BiOjNE5F7od"
           maxWidth={width}
           hideCaption={true}
           containerTagName="div"
-          protocol=""
-          onLoading={() => {}}
-          onSuccess={() => {}}
-          onAfterRender={() => {}}
-          onFailure={() => {}}
         />
         <InstagramEmbed
-          url="https://www.instagram.com/p/BfMZDGmAZt9"
+          url="https://www.instagram.com/p/BiOiHYalDEV"
           maxWidth={width}
           hideCaption={true}
           containerTagName="div"
-          protocol=""
-          onLoading={() => {}}
-          onSuccess={() => {}}
-          onAfterRender={() => {}}
-          onFailure={() => {}}
         />
       </div>
     );
