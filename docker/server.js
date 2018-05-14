@@ -4,20 +4,14 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const upload = multer();
+const path = require('path');
 
 const PORT = '8080';
 const HOST = 'localhost';
-// app.use(function (error, req, res, next) {
-//   // Any request to this server will get here, and will send an HTTP
-//   // response with the error message 'woops'
-//   console.log(req);
 
-//   console.error(err.stack);
+app.use(express.static(path.join(__dirname, 'static')));
 
-//   // res.status(500).send('Wtf! Something broke!');
-// });
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 function UTC() {
   let date = new Date();
@@ -29,8 +23,12 @@ app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/favicon.ico', function(req, res) {
-  res.sendFile(__dirname + '/favicon.ico');
+app.get('/:file', function(req, res) {
+  res.sendFile(__dirname + '/' + req.params.file);
+});
+
+app.get('/service-worker.js', function(req, res) {
+  res.sendFile(__dirname + '/service-worker.js');
 });
 
 app.get('/static/:path/:name', function(req, res, next) {
