@@ -1,0 +1,17 @@
+{
+  "name": "docker-nodejs-server-sochiphoneru",
+  "version": "1.0.0",
+  "description": "Node.js on Docker for Sochiphone.ru",
+  "author": "Stanislav Dagaev <460sochi@gmail.com>",
+  "main": "server.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.1",
+    "mongoose": "^5.0.18",
+    "multer": "^1.3.0"
+  }
+}

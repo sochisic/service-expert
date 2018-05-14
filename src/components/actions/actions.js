@@ -190,6 +190,35 @@ export const sendMail = e => {
   console.log(
     `Имя: ${store.getState().name}\nТелефон: ${store.getState().emailPhone}\nТекст сообщения: ${store.getState().text}`
   );
+
+  var myHeaders = new Headers();
+  myHeaders.append('Content-Type', 'application/json');
+
+  let letter = {
+    name: store.getState().name,
+    phone: store.getState().emailPhone,
+    text: store.getState().text,
+  };
+
+  var myInit = {
+    method: 'POST',
+    headers: myHeaders,
+    mode: 'cors',
+    cache: 'default',
+    body: JSON.stringify(letter),
+  };
+
+  fetch('/sendmail', myInit)
+    .then(function(response) {
+      if (response.status !== 200) {
+        console.log(`There was a problem. Status code : ${response.status}`);
+        return;
+      }
+      return response.json();
+    })
+    .then(function(data) {
+      console.log(data);
+    });
 };
 
 export const rewind = e => {
