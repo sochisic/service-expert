@@ -194,7 +194,7 @@ export const sendMail = e => {
   var myHeaders = new Headers();
   myHeaders.append('Content-Type', 'application/json');
 
-  let letter = {
+  let mail = {
     name: store.getState().name,
     phone: store.getState().emailPhone,
     text: store.getState().text,
@@ -205,20 +205,19 @@ export const sendMail = e => {
     headers: myHeaders,
     mode: 'cors',
     cache: 'default',
-    body: JSON.stringify(letter),
+    body: JSON.stringify(mail),
   };
 
-  fetch('/sendmail', myInit)
+  fetch('sendmail', myInit)
     .then(function(response) {
-      if (response.status !== 200) {
+      if (!response.ok) {
         console.log(`There was a problem. Status code : ${response.status}`);
         return;
       }
-      return response.json();
+      console.log(`MailSent! Response status is: `, response.status);
+      // do something
     })
-    .then(function(data) {
-      console.log(data);
-    });
+    .catch(err => console.log(`Ошибка при отправке ${err}`));
 };
 
 export const rewind = e => {

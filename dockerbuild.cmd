@@ -1,1 +1,0 @@
-docker build -t sochisic/sochiphone:beta -f docker/Dockerfile .
